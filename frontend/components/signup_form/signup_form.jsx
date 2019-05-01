@@ -21,7 +21,7 @@ class SignupForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.signup(user);
+    this.props.signup(user).then(_user => this.props.closeModal());
   }
 
   renderErrors() {
@@ -36,13 +36,13 @@ class SignupForm extends React.Component {
 
   render() {
     return (
-      <div className="signup-form-container">
+      <div>
         <form onSubmit={this.handleSubmit} className="signup-form-box">
-          Welcome to WECAMP!
+          Join Wecamp!
           <br />
-          Create an account!
+          Discover the best camping near me
           {this.renderErrors()}
-          <div className="signup-form">
+          <div>
             <br />
             <label>
               Username:
@@ -50,7 +50,6 @@ class SignupForm extends React.Component {
                 type="text"
                 value={this.state.username}
                 onChange={this.update("username")}
-                className="signup-input"
               />
             </label>
             <br />
@@ -60,7 +59,6 @@ class SignupForm extends React.Component {
                 type="password"
                 value={this.state.password}
                 onChange={this.update("password")}
-                className="signup-input"
               />
             </label>
             <br />
@@ -70,7 +68,6 @@ class SignupForm extends React.Component {
                 type="text"
                 value={this.state.imgUrl}
                 onChange={this.update("img_url")}
-                className="signup-input"
               />
             </label>
             <br />

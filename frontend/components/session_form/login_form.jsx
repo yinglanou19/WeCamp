@@ -20,7 +20,7 @@ class LoginForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.login(user);
+    this.props.login(user).then(_user => this.props.closeModal());
   }
 
   renderErrors() {
@@ -35,13 +35,13 @@ class LoginForm extends React.Component {
 
   render() {
     return (
-      <div className="login-form-container">
+      <div>
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          Welcome to WECAMP!
+          Welcome back!
           <br />
-          Please Sign In!
+          It is about time for another camping trip
           {this.renderErrors()}
-          <div className="login-form">
+          <div>
             <br />
             <label>
               Username:
@@ -49,7 +49,6 @@ class LoginForm extends React.Component {
                 type="text"
                 value={this.state.username}
                 onChange={this.update("username")}
-                className="login-input"
               />
             </label>
             <br />
@@ -59,7 +58,6 @@ class LoginForm extends React.Component {
                 type="password"
                 value={this.state.password}
                 onChange={this.update("password")}
-                className="login-input"
               />
             </label>
             <br />
