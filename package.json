@@ -24,7 +24,8 @@
     "test": "test"
   },
   "scripts": {
-    "start": "webpack --watch --mode=development"
+    "start": "webpack --watch --mode=development",
+    "postinstall": "webpack"
   },
   "repository": {
     "type": "git",
@@ -36,5 +37,9 @@
   "bugs": {
     "url": "https://github.com/yinglanou19/WeCamp/issues"
   },
-  "homepage": "https://github.com/yinglanou19/WeCamp#readme"
+  "homepage": "https://github.com/yinglanou19/WeCamp#readme",
+  "engines": {
+    "node": "11.13.0",
+    "npm": "6.9.0"
+  }
 }
