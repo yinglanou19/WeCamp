@@ -17,10 +17,11 @@
 
 .modal-child {
   position: center;
-  border: 1px solid black;
+  border: 1px solid lightgray;
   background: white;
   width: 250px;
   height: 300px;
+  padding: 5px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -28,4 +29,49 @@
 .login-form-box .signup-form-box {
   height: 100%;
   width: 100%;
+}
+
+.session-submit {
+  margin: 10px;
+  border-radius: 3px;
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+/* Header section */
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.header a {
+  text-decoration: none;
+}
+
+.header-logo {
+  font-family: "Days One", sans-serif;
+  font-size: 2em;
+  letter-spacing: 4px;
+  color: black;
+}
+
+.header-button {
+  margin: 10px;
+  border-radius: 3px;
+  background-color: none;
+  border: none;
+  color: grey;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: underline;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.header-message {
+  color: grey;
 }

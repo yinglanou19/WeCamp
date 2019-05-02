@@ -1,17 +1,25 @@
 import React from "react";
 
-const Greeting = ({ currentUser, logout, openModal }) => {
+const Greeting = ({ currentUser, logout, openModal, demologin }) => {
   const sessionLinks = () => (
     <nav>
-      <button onClick={() => openModal("login")}>Log In</button>
-      <br />
-      <button onClick={() => openModal("signup")}>Sign Up</button>
+      <button className="header-button" onClick={() => openModal("login")}>
+        Log In
+      </button>
+      <button className="header-button" onClick={() => openModal("signup")}>
+        Sign Up
+      </button>
+      <button className="header-button" onClick={() => demologin()}>
+        Demo Login
+      </button>
     </nav>
   );
   const personalGreeting = () => (
     <nav>
-      <h2>Hi, {currentUser.username}!</h2>
-      <button onClick={logout}>Log Out</button>
+      <span className="header-message">Hi, {currentUser.username}!</span>
+      <button className="header-button" onClick={logout}>
+        Log Out
+      </button>
     </nav>
   );
 
