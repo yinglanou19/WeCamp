@@ -2,17 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.modal-form {
-  position: relative;
+.modal-background {
+  position: fixed;
+  text-align: center;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
   padding: 15px;
-  background: rgb(192, 125, 125);
+  background: rgba(255, 255, 255, 0.5);
   z-index: 10;
   border: 1px solid #888;
 }
 
 .modal-child {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: center;
+  border: 1px solid black;
+  background: white;
+  width: 250px;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login-form-box .signup-form-box {
+  height: 100%;
+  width: 100%;
 }

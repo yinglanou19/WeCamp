@@ -37,9 +37,8 @@ class LoginForm extends React.Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          Welcome back!
-          <br />
-          It is about time for another camping trip
+          <h3>Welcome back!</h3>
+          <p>It is about time for another camping trip</p>
           {this.renderErrors()}
           <div>
             <br />
