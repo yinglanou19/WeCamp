@@ -15,11 +15,13 @@ const Greeting = ({ currentUser, logout, openModal, demologin }) => {
     </nav>
   );
   const personalGreeting = () => (
-    <nav>
-      <span className="header-message">Hi, {currentUser.username}!</span>
-      <button className="header-button" onClick={logout}>
-        Log Out
-      </button>
+    <nav className="header-user-nav">
+      <a hef="#" className="header-user-img">
+        {currentUser.username}
+      </a>
+      <div className="header-dropdown-div">
+        <a onClick={logout}>Log Out</a>
+      </div>
     </nav>
   );
 

@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/* Modal */
 .modal-background {
   position: fixed;
   text-align: center;
@@ -19,29 +20,63 @@
   position: center;
   border: 1px solid lightgray;
   background: white;
-  width: 250px;
-  height: 300px;
+  width: 280px;
+  height: 380px;
   padding: 5px;
   margin-left: auto;
   margin-right: auto;
 }
+/* head logo */
+.header-logo :hover {
+  cursor: pointer;
+}
 
+/* sign up/ log in form */
+.session-form-errors {
+  list-style: none;
+  color: grey;
+}
+
+.session-input-field {
+  color: black;
+  font-size: 1em;
+  font-weight: bold;
+  margin: 5px;
+  padding: 15px;
+  border: 3px solid black;
+  width: 70%;
+}
 .login-form-box .signup-form-box {
   height: 100%;
   width: 100%;
 }
 
+.login-form-box p,
+.signup-form-box p {
+  color: grey;
+}
 .session-submit {
   margin: 10px;
-  border-radius: 3px;
-  background-color: #4caf50; /* Green */
-  border: none;
+  border: 3px solid #40d9ac;
+  background-color: #40d9ac; /* Green */
   color: white;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  cursor: pointer;
+  width: 83%;
+}
+.session-submit:hover {
+  background-color: white;
+  color: #40d9ac;
+  border-color: #40d9ac;
+}
+.switch-modal-button {
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }
 /* Header section */
 .header {
@@ -61,17 +96,39 @@
 
 .header-button {
   margin: 10px;
-  border-radius: 3px;
   background-color: none;
-  border: none;
-  color: grey;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: underline;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-color: lightgray;
+  color: darkslategrey;
+  padding: 0;
+  text-align: justify;
   display: inline-block;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .header-message {
   color: grey;
+}
+
+.header-user-nav:hover .header-dropdown-div {
+  display: block;
+}
+.header-user-nav {
+  margin: 10px 20px;
+}
+.header-dropdown-div {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 400px;
+  box-shadow: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.header-dropdown-div a {
+  position: absolute;
+  cursor: pointer;
 }

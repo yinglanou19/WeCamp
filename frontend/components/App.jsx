@@ -1,7 +1,10 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import GreetingContainer from "./greeting/greeting_container";
 import Modal from "./modal/modal";
+import NotFoundPage from "./not_found_page";
+import LoginFormContainer from "./session_form/login_form_container";
+import SignupFormContainer from "./signup_form/signup_form_container";
 const App = () => (
   <div>
     <Modal />
@@ -11,6 +14,10 @@ const App = () => (
       </a>
       <GreetingContainer />
     </div>
+    <Switch>
+      <Route path="/" exact />
+      <Route component={NotFoundPage} />
+    </Switch>
   </div>
 );
 

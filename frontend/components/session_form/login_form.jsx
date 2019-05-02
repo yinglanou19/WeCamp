@@ -8,6 +8,7 @@ class LoginForm extends React.Component {
       password: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleOpenModal = this.handleOpenModal.bind(this);
   }
 
   update(field) {
@@ -23,9 +24,12 @@ class LoginForm extends React.Component {
     this.props.login(user).then(_user => this.props.closeModal());
   }
 
+  handleOpenModal() {
+    this.props.openModal();
+  }
   renderErrors() {
     return (
-      <ul>
+      <ul className="session-form-errors">
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>{error}</li>
         ))}
@@ -42,27 +46,31 @@ class LoginForm extends React.Component {
           {this.renderErrors()}
           <div>
             <br />
-            <label>
-              Username:
-              <input
-                type="text"
-                value={this.state.username}
-                onChange={this.update("username")}
-              />
-            </label>
+            <input
+              type="text"
+              value={this.state.username}
+              onChange={this.update("username")}
+              placeholder="USERNAME"
+              className="session-input-field"
+            />
             <br />
-            <label>
-              Password:
-              <input
-                type="password"
-                value={this.state.password}
-                onChange={this.update("password")}
-              />
-            </label>
+            <input
+              type="password"
+              value={this.state.password}
+              onChange={this.update("password")}
+              placeholder="PASSWORD"
+              className="session-input-field"
+            />
             <br />
             <input className="session-submit" type="submit" value="Sign In" />
           </div>
         </form>
+        <button onClick={this.handleOpenModal} className="switch-modal-button">
+          Dont have a wecamp account?
+          <strong>
+            <u>Sign Up!</u>
+          </strong>
+        </button>
       </div>
     );
   }
