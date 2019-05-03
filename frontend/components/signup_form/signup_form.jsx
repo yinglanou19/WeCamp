@@ -21,7 +21,9 @@ class SignupForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.signup(user).then(_user => this.props.closeModal());
+    const u = this.props.signup(user);
+    alert("aa");
+    u.then(_user => this.props.closeModal());
   }
 
   handleOpenModal() {
@@ -30,7 +32,7 @@ class SignupForm extends React.Component {
 
   renderErrors() {
     alert(typeof this.props.errors);
-    alert(this.props.errors);
+    alert(this.props.errors.toString());
     return (
       <ul className="session-form-errors">
         {this.props.errors.map((error, i) => (
