@@ -109,10 +109,6 @@
   cursor: pointer;
 }
 
-.header-message {
-  color: grey;
-}
-
 .header-user-nav:hover .header-dropdown-div {
   display: block;
 }
@@ -122,13 +118,19 @@
 .header-dropdown-div {
   display: none;
   position: absolute;
-  background-color: white;
   min-width: 400px;
-  box-shadow: rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
 .header-dropdown-div a {
   position: absolute;
   cursor: pointer;
+  border: 1px solid lightgrey;
+  padding: 5px;
+  color: darkslategrey;
+}
+
+.header-user-img {
+  height: 40px;
+  width: 40px;
 }

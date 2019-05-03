@@ -16,9 +16,7 @@ const Greeting = ({ currentUser, logout, openModal, demologin }) => {
   );
   const personalGreeting = () => (
     <nav className="header-user-nav">
-      <a hef="#" className="header-user-img">
-        {currentUser.username}
-      </a>
+      <img src="green_tent.png" className="header-user-img" />
       <div className="header-dropdown-div">
         <a onClick={logout}>Log Out</a>
       </div>
