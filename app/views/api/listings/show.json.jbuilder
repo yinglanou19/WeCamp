@@ -1,0 +1,1 @@
+json.extract! @listing, :title, :description,:host_id,:long,:lat, :address, :daily_price, :max_capacity
