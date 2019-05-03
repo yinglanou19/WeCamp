@@ -29,7 +29,8 @@ class SignupForm extends React.Component {
   }
 
   renderErrors() {
-    alert(Array.isArray(this.props.errors));
+    alert(typeof this.props.errors);
+    alert(this.props.errors);
     return (
       <ul className="session-form-errors">
         {this.props.errors.map((error, i) => (
