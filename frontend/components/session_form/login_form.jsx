@@ -28,6 +28,7 @@ class LoginForm extends React.Component {
     this.props.openModal();
   }
   renderErrors() {
+    alert(Array.isArray(this.props.errors));
     return (
       <ul className="session-form-errors">
         {this.props.errors.map((error, i) => (
