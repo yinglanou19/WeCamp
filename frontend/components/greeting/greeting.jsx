@@ -1,12 +1,18 @@
 import React from "react";
 
-const Greeting = ({ currentUser, logout, openModal, demologin }) => {
+const Header = ({ currentUser, logout, demologin, onButtonClick }) => {
   const sessionLinks = () => (
     <nav>
-      <button className="header-button" onClick={() => openModal("login")}>
+      <button
+        className="header-button"
+        onClick={e => onButtonClick("login", e)}
+      >
         Log In
       </button>
-      <button className="header-button" onClick={() => openModal("signup")}>
+      <button
+        className="header-button"
+        onClick={e => onButtonClick("signup", e)}
+      >
         Sign Up
       </button>
       <button className="header-button" onClick={() => demologin()}>
@@ -23,7 +29,14 @@ const Greeting = ({ currentUser, logout, openModal, demologin }) => {
     </nav>
   );
 
-  return currentUser ? personalGreeting() : sessionLinks();
+  return (
+    <header className="header">
+      <a href="/">
+        <h1 className="header-logo">WECAMP</h1>
+      </a>
+      {currentUser ? personalGreeting() : sessionLinks()}
+    </header>
+  );
 };
 
-export default Greeting;
+export default Header;

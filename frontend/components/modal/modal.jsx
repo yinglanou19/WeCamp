@@ -1,15 +1,10 @@
 import React from "react";
-import { closeModal } from "../../actions/modal_actions";
-import { connect } from "react-redux";
 import LoginFormContainer from "../session_form/login_form_container";
 import SignupFormContainer from "../signup_form/signup_form_container";
 
-function Modal({ modal, closeModal }) {
-  if (!modal) {
-    return null;
-  }
+export default function Modal({ open, button }) {
   let component;
-  switch (modal) {
+  switch (button) {
     case "login":
       component = <LoginFormContainer />;
       break;
@@ -20,27 +15,29 @@ function Modal({ modal, closeModal }) {
       return null;
   }
   return (
-    <div className="modal-background" onClick={closeModal}>
-      <div className="modal-child" onClick={e => e.stopPropagation()}>
-        <div>{component}</div>
+    open && (
+      <div className="modal-background">
+        <div className="modal-child">
+          <div>{component}</div>
+        </div>
       </div>
-    </div>
+    )
   );
 }
 
-const mapStateToProps = state => {
-  return {
-    modal: state.ui.modal
-  };
-};
+// const mapStateToProps = state => {
+//   return {
+//     modal: state.ui.modal
+//   };
+// };
 
-const mapDispatchToProps = dispatch => {
-  return {
-    closeModal: () => dispatch(closeModal())
-  };
-};
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     closeModal: () => dispatch(closeModal())
+//   };
+// };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Modal);
+// export default connect(
+//   mapStateToProps,
+//   mapDispatchToProps
+// )(Modal);
