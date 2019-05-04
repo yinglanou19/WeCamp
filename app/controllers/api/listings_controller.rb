@@ -1,4 +1,5 @@
 class Api::ListingsController < ApplicationController
+    before_action :require_logged_in, only:[:create]
     def index
         @listings = Listing.all
     end
