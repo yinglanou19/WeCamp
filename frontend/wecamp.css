@@ -1,0 +1,9 @@
+#root {
+  min-height: 100vh;
+  min-width: 100%;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}

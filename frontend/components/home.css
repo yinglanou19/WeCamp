@@ -1,0 +1,58 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.header a {
+  text-decoration: none;
+}
+
+.header-logo {
+  font-family: "Days One", sans-serif;
+  font-size: 2em;
+  letter-spacing: 4px;
+  color: black;
+}
+.header-logo :hover {
+  cursor: pointer;
+}
+.header-button {
+  margin: 10px;
+  background-color: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-color: lightgray;
+  color: black;
+  padding: 0;
+  text-align: justify;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: lighter;
+  cursor: pointer;
+}
+
+.header-user-nav:hover .header-dropdown-div {
+  display: block;
+}
+.header-user-nav {
+  margin: 10px 20px;
+}
+.header-dropdown-div {
+  display: none;
+  position: absolute;
+  min-width: 400px;
+  z-index: 1;
+}
+
+.header-dropdown-div a {
+  position: absolute;
+  cursor: pointer;
+  border: 1px solid lightgrey;
+  padding: 5px;
+  color: darkslategrey;
+}
+
+.header-user-img {
+  height: 40px;
+  width: 40px;
+}

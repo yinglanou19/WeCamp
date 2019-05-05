@@ -5,7 +5,7 @@ import configureStore from "./store/store";
 import Root from "./components/root";
 import { addListing, fetchListings } from "../frontend/actions/listing_actions";
 import * as ListingAPIUtil from "../frontend/util/listings_api_util";
-
+import "./wecamp.css";
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
   let store;

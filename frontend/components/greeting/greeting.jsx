@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./greeting.css";
 const Header = ({ currentUser, logout, demologin, onButtonClick }) => {
   const sessionLinks = () => (
     <nav>
@@ -7,16 +7,16 @@ const Header = ({ currentUser, logout, demologin, onButtonClick }) => {
         className="header-button"
         onClick={e => onButtonClick("login", e)}
       >
-        Log In
+        Log in
       </button>
       <button
         className="header-button"
         onClick={e => onButtonClick("signup", e)}
       >
-        Sign Up
+        Sign up
       </button>
       <button className="header-button" onClick={() => demologin()}>
-        Demo Login
+        Demo login
       </button>
     </nav>
   );

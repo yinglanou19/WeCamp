@@ -1,23 +1,30 @@
 import React from "react";
 import LoginFormContainer from "../session_form/login_form_container";
 import SignupFormContainer from "../signup_form/signup_form_container";
-
-export default function Modal({ open, button }) {
+import "./modal.css";
+export default function Modal({ open, formtype, onClose, onSwitch }) {
   let component;
-  switch (button) {
+  switch (formtype) {
     case "login":
-      component = <LoginFormContainer />;
+      component = <LoginFormContainer onSwitch={type => onSwitch(type)} />;
       break;
     case "signup":
-      component = <SignupFormContainer />;
+      component = <SignupFormContainer onSwitch={type => onSwitch(type)} />;
       break;
     default:
       return null;
   }
   return (
     open && (
-      <div className="modal-background">
-        <div className="modal-child">
+      <div
+        className="modal-background"
+        onClick={e => {
+          console.log("herer");
+          e.stopPropagation();
+          onClose();
+        }}
+      >
+        <div className="modal-child" onClick={e => e.stopPropagation()}>
           <div>{component}</div>
         </div>
       </div>

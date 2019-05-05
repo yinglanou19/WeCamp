@@ -1,0 +1,24 @@
+.modal-background {
+  position: fixed;
+  text-align: center;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 10;
+  border: 1px solid #888;
+}
+
+.modal-child {
+  position: center;
+  border: 1px solid lightgray;
+  background: white;
+  width: 280px;
+  height: 430px;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}

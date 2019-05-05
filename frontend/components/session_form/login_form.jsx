@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./session_form.css";
 class LoginForm extends React.Component {
   constructor(props) {
     super(props);
@@ -25,7 +25,7 @@ class LoginForm extends React.Component {
   }
 
   handleOpenModal() {
-    this.props.openModal();
+    this.props.onSwitch("signup");
   }
   renderErrors() {
     return (
