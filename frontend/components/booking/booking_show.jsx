@@ -1,6 +1,5 @@
 import React from "react";
-import { deleteBooking } from "../../util/bookings_api_util";
-export default function BookingShow({ booking, listing }) {
+export default function BookingShow({ booking, listing, deleteBooking }) {
   return (
     <div>
       <h1>{listing.title}</h1>

@@ -1,13 +1,17 @@
 import { OPEN_MODAL, CLOSE_MODAL } from "../actions/modal_actions";
-
-export default (state = null, action) => {
+const defaultState = {
+  formType: "",
+  isOpen: false
+};
+export default (state = defaultState, action) => {
   Object.freeze(state);
   switch (action.type) {
     case OPEN_MODAL:
-      return action.modal;
+      let newState = { formType: action.formType, isOpen: true };
+      return newState;
 
     case CLOSE_MODAL:
-      return null;
+      return defaultState;
 
     default:
       return state;

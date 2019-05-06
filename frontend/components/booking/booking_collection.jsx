@@ -17,7 +17,7 @@ class BookingCollection extends React.Component {
               <BookingShow
                 booking={booking}
                 listing={this.props.listings[booking.listingId]}
-                deletebooking={this.props.deleteBooking}
+                deleteBooking={this.props.deleteBooking}
               />
             </li>
           ))}

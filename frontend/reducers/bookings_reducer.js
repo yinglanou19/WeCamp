@@ -15,6 +15,7 @@ const bookingsReducer = (state = {}, action) => {
     case REMOVE_BOOKING:
       let newState = Object.assign({}, state);
       delete newState[action.id];
+      return newState;
     default:
       return state;
   }

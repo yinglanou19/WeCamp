@@ -1,17 +1,16 @@
 import React from "react";
 import "./greeting.css";
-const Header = ({ currentUser, logout, demologin, onButtonClick }) => {
+const Header = ({ currentUser, logout, demologin, match, openModal }) => {
   const sessionLinks = () => (
     <nav className="header-button-collection">
-      <button
-        className="header-button"
-        onClick={e => onButtonClick("login", e)}
-      >
+      <button className="header-button" onClick={() => openModal("login")}>
         Log in
       </button>
       <button
         className="header-button"
-        onClick={e => onButtonClick("signup", e)}
+        onClick={() => {
+          return openModal("signup");
+        }}
       >
         Sign up
       </button>
@@ -30,7 +29,7 @@ const Header = ({ currentUser, logout, demologin, onButtonClick }) => {
       </div>
     </nav>
   );
-
+  if (match.location === "/404") return null;
   return (
     <header className="header">
       <a href="/" className="header-logo">

@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { addBooking } from "../../actions/booking_actions";
+import { withRouter } from "react-router-dom";
 class BookingCreateForm extends React.Component {
   constructor(props) {
     super(props);
@@ -23,7 +24,7 @@ class BookingCreateForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const b = Object.assign({}, this.state);
-    this.props.addBooking(b);
+    this.props.addBooking(b).then(() => this.props.history.push("/bookings"));
   }
   // renderErrors() {
   //     return (
@@ -73,7 +74,9 @@ const mapDispatchToProps = dispatch => ({
   addBooking: booking => dispatch(addBooking(booking))
 });
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(BookingCreateForm);
+export default withRouter(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(BookingCreateForm)
+);

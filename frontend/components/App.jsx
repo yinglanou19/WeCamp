@@ -7,14 +7,18 @@ import SignupFormContainer from "./signup_form/signup_form_container";
 import ListingCreateForm from "./listing/listing_create_form";
 import ListingDetail from "./listing/list_detail";
 import BookingCollection from "./booking/booking_collection";
+import HeaderContainer from "../components/greeting/greeting_container";
 const App = () => (
-  <Switch>
-    <Route exact path="/" component={Home} />
-    <Route path="/listings/:listingId" component={ListingDetail} />
-    <Route path="/bookings" component={BookingCollection} />
-    <Route path="/create_listing" component={ListingCreateForm} />
-    <Route component={NotFoundPage} />
-  </Switch>
+  <>
+    <HeaderContainer />
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route path="/listings/:listingId" component={ListingDetail} />
+      <Route path="/bookings" component={BookingCollection} />
+      <Route path="/create_listing" component={ListingCreateForm} />
+      <Route component={NotFoundPage} />
+    </Switch>
+  </>
 );
 
 export default App;

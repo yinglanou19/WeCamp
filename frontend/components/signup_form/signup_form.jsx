@@ -21,11 +21,11 @@ class SignupForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.signup(user).then(_user => this.props.onClose());
+    this.props.signup(user).then(_user => this.props.closeModal());
   }
 
   handleOpenModal() {
-    this.props.onSwitch("login");
+    this.props.openModal("login");
   }
 
   renderErrors() {

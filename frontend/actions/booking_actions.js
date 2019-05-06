@@ -38,8 +38,8 @@ export const fetchBookings = () => dispatch => {
 };
 
 export const deleteBooking = id => dispatch => {
-  return BookingAPIUtil.deleteBooking(id).then(id =>
-    dispatch(removeBooking(id))
+  return BookingAPIUtil.deleteBooking(id).then(booking =>
+    dispatch(removeBooking(booking.id))
   );
 };
 

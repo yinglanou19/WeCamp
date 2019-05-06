@@ -25,11 +25,7 @@ class Home extends React.Component {
             this.props.clearSessionErrors();
           }}
         />
-        <HeaderContainer
-          onButtonClick={(formtype, e) => {
-            this.setState({ formtype: formtype, open: true });
-          }}
-        />
+
         <div className="listing-container-div">
           <ListingCollection />
         </div>

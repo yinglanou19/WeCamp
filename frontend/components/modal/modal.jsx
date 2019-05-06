@@ -1,37 +1,28 @@
 import React from "react";
 import LoginFormContainer from "../session_form/login_form_container";
 import SignupFormContainer from "../signup_form/signup_form_container";
+import { connect } from "react-redux";
+import { closeModal } from "../../actions/modal_actions";
 import "./modal.css";
-export default function Modal({ open, formtype, onClose, onSwitch }) {
+function Modal({ isOpen, formType, closeModal }) {
   let component;
-  switch (formtype) {
+  switch (formType) {
     case "login":
-      component = (
-        <LoginFormContainer
-          onClose={onClose}
-          onSwitch={type => onSwitch(type)}
-        />
-      );
+      component = <LoginFormContainer />;
       break;
     case "signup":
-      component = (
-        <SignupFormContainer
-          onClose={onClose}
-          onSwitch={type => onSwitch(type)}
-        />
-      );
+      component = <SignupFormContainer />;
       break;
     default:
       return null;
   }
   return (
-    open && (
+    isOpen && (
       <div
         className="modal-background"
         onClick={e => {
-          console.log("herer");
           e.stopPropagation();
-          onClose();
+          closeModal();
         }}
       >
         <div className="modal-child" onClick={e => e.stopPropagation()}>
@@ -42,19 +33,20 @@ export default function Modal({ open, formtype, onClose, onSwitch }) {
   );
 }
 
-// const mapStateToProps = state => {
-//   return {
-//     modal: state.ui.modal
-//   };
-// };
+const mapStateToProps = state => {
+  return {
+    formType: state.ui.modal.formType,
+    isOpen: state.ui.modal.isOpen
+  };
+};
 
-// const mapDispatchToProps = dispatch => {
-//   return {
-//     closeModal: () => dispatch(closeModal())
-//   };
-// };
+const mapDispatchToProps = dispatch => {
+  return {
+    closeModal: () => dispatch(closeModal())
+  };
+};
 
-// export default connect(
-//   mapStateToProps,
-//   mapDispatchToProps
-// )(Modal);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Modal);
