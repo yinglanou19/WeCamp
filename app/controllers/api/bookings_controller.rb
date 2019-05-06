@@ -1,5 +1,5 @@
 class Api::BookingsController < ApplicationController
-    before_action :require_logged_in, only:[:create,:update,:destroy]
+    before_action :require_logged_in, only:[:create,:update,:destroy,:index]
     def create
         @booking = Booking.new(booking_params)
         @booking.guest_id = current_user.id
@@ -20,6 +20,10 @@ class Api::BookingsController < ApplicationController
     end
 
     def show
+    end
+
+    def index
+        @bookings = current_user.bookings
     end
 
     def destroy

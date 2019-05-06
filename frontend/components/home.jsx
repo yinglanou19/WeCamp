@@ -4,6 +4,7 @@ import HeaderContainer from "../components/greeting/greeting_container";
 import "./home.css";
 import { clearSessionErrors } from "../actions/session_actions";
 import { connect } from "react-redux";
+import ListingCollection from "./listing/listing_collection";
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -29,6 +30,9 @@ class Home extends React.Component {
             this.setState({ formtype: formtype, open: true });
           }}
         />
+        <div className="listing-container-div">
+          <ListingCollection />
+        </div>
       </div>
     );
   }

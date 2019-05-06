@@ -36,16 +36,19 @@
 }
 .header-user-nav {
   margin: 10px 20px;
+  position: relative;
 }
 .header-dropdown-div {
   display: none;
   position: absolute;
-  min-width: 400px;
+  width: 100px;
   z-index: 1;
+  right: 5px;
 }
 
 .header-dropdown-div a {
-  position: absolute;
+  position: relative;
+  display: block;
   cursor: pointer;
   border: 1px solid lightgrey;
   padding: 5px;
@@ -55,4 +58,12 @@
 .header-user-img {
   height: 40px;
   width: 40px;
+}
+.header-button-collection {
+  margin-right: 15px;
+}
+
+/* ListingCollection */
+.listing-container-div {
+  padding-top: 50px;
 }

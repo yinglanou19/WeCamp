@@ -2,7 +2,7 @@ import React from "react";
 import "./greeting.css";
 const Header = ({ currentUser, logout, demologin, onButtonClick }) => {
   const sessionLinks = () => (
-    <nav>
+    <nav className="header-button-collection">
       <button
         className="header-button"
         onClick={e => onButtonClick("login", e)}
@@ -24,6 +24,7 @@ const Header = ({ currentUser, logout, demologin, onButtonClick }) => {
     <nav className="header-user-nav">
       <img src="green_tent.png" className="header-user-img" />
       <div className="header-dropdown-div">
+        <a href="/#/create_listing">Add Listing</a>
         <a onClick={logout}>Log Out</a>
       </div>
     </nav>
@@ -31,8 +32,8 @@ const Header = ({ currentUser, logout, demologin, onButtonClick }) => {
 
   return (
     <header className="header">
-      <a href="/">
-        <h1 className="header-logo">WECAMP</h1>
+      <a href="/" className="header-logo">
+        WECAMP
       </a>
       {currentUser ? personalGreeting() : sessionLinks()}
     </header>

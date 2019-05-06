@@ -6,10 +6,20 @@ export default function Modal({ open, formtype, onClose, onSwitch }) {
   let component;
   switch (formtype) {
     case "login":
-      component = <LoginFormContainer onSwitch={type => onSwitch(type)} />;
+      component = (
+        <LoginFormContainer
+          onClose={onClose}
+          onSwitch={type => onSwitch(type)}
+        />
+      );
       break;
     case "signup":
-      component = <SignupFormContainer onSwitch={type => onSwitch(type)} />;
+      component = (
+        <SignupFormContainer
+          onClose={onClose}
+          onSwitch={type => onSwitch(type)}
+        />
+      );
       break;
     default:
       return null;
