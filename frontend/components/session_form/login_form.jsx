@@ -25,6 +25,7 @@ class LoginForm extends React.Component {
   }
 
   handleOpenModal() {
+    this.props.clearErrors();
     this.props.openModal("signup");
   }
   renderErrors() {

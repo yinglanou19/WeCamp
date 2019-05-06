@@ -1,12 +1,16 @@
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
-import { logout, login } from "../../actions/session_actions";
+import {
+  logout,
+  login,
+  clearSessionErrors
+} from "../../actions/session_actions";
 import { openModal, closeModal } from "../../actions/modal_actions";
 import Greeting from "./greeting";
 
-const mapStateToProps = ({ session, entities: { users } }) => {
+const mapStateToProps = (state, ownProps) => {
   return {
-    currentUser: users[session.id]
+    currentUser: state.entities.users[state.session.id]
   };
 };
 
@@ -14,7 +18,7 @@ const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout()),
   openModal: formType => dispatch(openModal(formType)),
   closeModal: () => dispatch(closeModal()),
-
+  clearErrors: () => dispatch(clearSessionErrors()),
   demologin: () =>
     dispatch(login({ username: "bobabutt", password: "bobabutt" }))
 });

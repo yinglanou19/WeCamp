@@ -3,6 +3,7 @@ import LoginFormContainer from "../session_form/login_form_container";
 import SignupFormContainer from "../signup_form/signup_form_container";
 import { connect } from "react-redux";
 import { closeModal } from "../../actions/modal_actions";
+import { clearSessionErrors } from "../../actions/session_actions";
 import "./modal.css";
 function Modal({ isOpen, formType, closeModal }) {
   let component;
@@ -23,6 +24,7 @@ function Modal({ isOpen, formType, closeModal }) {
         onClick={e => {
           e.stopPropagation();
           closeModal();
+          clearSessionErrors();
         }}
       >
         <div className="modal-child" onClick={e => e.stopPropagation()}>
@@ -42,7 +44,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    closeModal: () => dispatch(closeModal())
+    closeModal: () => dispatch(closeModal()),
+    clearSessionErrors: () => dispatch(clearSessionErrors())
   };
 };
 

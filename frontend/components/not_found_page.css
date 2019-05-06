@@ -3,7 +3,13 @@
   left: 0;
   height: 100vh;
   width: 100%;
-  /* background-image: image("../public/not_found_background.jpg"); */
   /* background-color: pink; */
   overflow: hidden;
+}
+
+#not-found-background h1 {
+  position: absolute;
+  color: white;
+  top: 30%;
+  left: 30%;
 }
