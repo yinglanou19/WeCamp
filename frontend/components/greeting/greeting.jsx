@@ -24,6 +24,7 @@ const Header = ({ currentUser, logout, demologin, onButtonClick }) => {
     <nav className="header-user-nav">
       <img src="green_tent.png" className="header-user-img" />
       <div className="header-dropdown-div">
+        <a href="/#/bookings">My Bookings</a>
         <a href="/#/create_listing">Add Listing</a>
         <a onClick={logout}>Log Out</a>
       </div>

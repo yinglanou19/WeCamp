@@ -28,3 +28,9 @@ export const fetchListings = () => dispatch => {
     dispatch(receiveListings(listings))
   );
 };
+
+export const fetchListing = id => dispatch => {
+  return ListingAPIUtil.fetchListing().then(listing =>
+    dispatch(receiveListing(listing))
+  );
+};

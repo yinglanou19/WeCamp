@@ -10,3 +10,9 @@ export const fetchAllListings = () =>
     method: "GET",
     url: "/api/listings"
   });
+
+export const fetchListing = id =>
+  $.ajax({
+    method: "get",
+    url: `/api/listings/${id}`
+  });
