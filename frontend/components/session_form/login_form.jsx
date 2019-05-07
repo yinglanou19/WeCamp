@@ -67,7 +67,7 @@ class LoginForm extends React.Component {
           </div>
         </form>
         <button onClick={this.handleOpenModal} className="switch-modal-button">
-          Dont have a wecamp account?
+          Dont have a wecamp account?&nbsp;
           <strong>
             <u>Sign Up!</u>
           </strong>

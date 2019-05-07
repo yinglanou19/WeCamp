@@ -7,12 +7,21 @@
 
 .session-input-field {
   color: black;
-  font-size: 1em;
+  font-size: 15px;
   font-weight: bold;
   margin: 5px;
   padding: 15px;
   border: 1px solid black;
-  width: 70%;
+  width: 72%;
+}
+.session-input-field-name {
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 5px;
+  padding: 13px;
+  border: 1px solid black;
+  width: 30%;
 }
 .login-form-box .signup-form-box {
   height: 100%;

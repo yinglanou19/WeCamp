@@ -5,7 +5,10 @@ class SignupForm extends React.Component {
     super(props);
     this.state = {
       username: "",
-      password: ""
+      password: "",
+      first_name: "",
+      last_name: "",
+      zip_code: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleOpenModal = this.handleOpenModal.bind(this);
@@ -47,6 +50,20 @@ class SignupForm extends React.Component {
           <p>Discover the best camping near me</p>
           {this.renderErrors()}
           <div>
+            <input
+              type="text"
+              value={this.state.first_name}
+              onChange={this.update("first_name")}
+              placeholder="FIRST NAME"
+              className="session-input-field-name"
+            />
+            <input
+              type="text"
+              value={this.state.last_name}
+              onChange={this.update("last_name")}
+              placeholder="LAST NAME"
+              className="session-input-field-name"
+            />
             <br />
             <input
               type="text"
@@ -65,6 +82,17 @@ class SignupForm extends React.Component {
             />
             <br />
             <input
+              type="number"
+              step="1"
+              min="10000"
+              max="99999"
+              value={this.state.zip_code}
+              onChange={this.update("zip_code")}
+              placeholder="ZIP CODE..."
+              className="session-input-field"
+            />
+            <br />
+            <input
               className="session-submit"
               type="submit"
               value="Create account"
@@ -72,7 +100,7 @@ class SignupForm extends React.Component {
           </div>
         </form>
         <button onClick={this.handleOpenModal} className="switch-modal-button">
-          Already a wecamper?
+          Already a wecamper?&nbsp;
           <strong>
             <u>Log in!</u>
           </strong>
