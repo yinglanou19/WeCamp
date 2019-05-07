@@ -9,6 +9,7 @@ import ListingDetail from "./listing/list_detail";
 import BookingCollection from "./booking/booking_collection";
 import HeaderContainer from "../components/greeting/greeting_container";
 import Modal from "./modal/modal";
+import BookingEdit from "./booking/booking_edit";
 
 const App = () => (
   <>
@@ -17,6 +18,7 @@ const App = () => (
     <Switch>
       <Route exact path="/" component={Home} />
       <Route path="/listings/:listingId" component={ListingDetail} />
+      <Route path="/bookings/:bookingId" component={BookingEdit} />
       <Route path="/bookings" component={BookingCollection} />
       <Route path="/create_listing" component={ListingCreateForm} />
       <Route path="/404" component={NotFoundPage} />

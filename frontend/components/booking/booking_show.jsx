@@ -7,7 +7,7 @@ export default function BookingShow({ booking, listing, deleteBooking }) {
       <h1>{booking.checkOut}</h1>
       <h1>{booking.id}</h1>
       <button onClick={() => deleteBooking(booking.id)}>Delete</button>
-      <button>Edit</button>
+      <a href={`/#/bookings/${booking.id}`}>edit this booking!</a>
     </div>
   );
 }
