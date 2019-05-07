@@ -1,0 +1,10 @@
+.listing-collection-ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.listing-collection-ul li {
+  margin: 15px;
+}

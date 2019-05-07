@@ -13,7 +13,7 @@ class Home extends React.Component {
   render() {
     return (
       <div className="page-container">
-        <Modal
+        {/* <Modal
           open={this.state.open}
           formtype={this.state.formtype}
           onClose={() => {
@@ -24,7 +24,7 @@ class Home extends React.Component {
             this.setState({ formtype: type });
             this.props.clearSessionErrors();
           }}
-        />
+        /> */}
 
         <div className="listing-container-div">
           <ListingCollection />

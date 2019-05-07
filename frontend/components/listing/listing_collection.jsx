@@ -2,6 +2,7 @@ import { connect } from "react-redux";
 import React from "react";
 import ListingPreview from "./list_preview";
 import { fetchListings } from "../../actions/listing_actions";
+import "./listing_collection.css";
 class ListingCollection extends React.Component {
   componentDidMount() {
     this.props.fetchListings();
@@ -10,7 +11,7 @@ class ListingCollection extends React.Component {
   render() {
     return (
       this.props.listings && (
-        <ul>
+        <ul className="listing-collection-ul">
           {this.props.listings.map(listing => (
             <li key={listing.id}>
               <ListingPreview listing={listing} />

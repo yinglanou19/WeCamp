@@ -1,0 +1,69 @@
+.create-book-form-container {
+  height: 210px;
+  width: 300px;
+}
+
+.create-book-price-container {
+  height: 33%;
+  width: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  font-family: Calibre, Helvetica, Arial, sans-serif;
+}
+.create-book-price-container div {
+  padding: 0px 0px 0px 10px;
+  font-size: 14px;
+}
+
+.create-book-price-container :nth-child(1) {
+  padding: 10px 0px 0px 10px;
+  font-size: 22px;
+}
+.create-book-form-container form {
+  height: 67%;
+  width: 100%;
+}
+.create-book-data-container {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.create-book-data-container div input {
+  width: 100%;
+}
+
+.create-book-button-container {
+  height: 50%;
+  width: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.create-book-per-night {
+  color: grey;
+}
+
+.create-book-data-container > div {
+  width: 33%;
+  height: 100%;
+  border: 1px solid black;
+}
+
+.create-book-submit {
+  margin: 10px;
+  border: 3px solid #40d9ac;
+  background-color: #40d9ac; /* Green */
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  cursor: pointer;
+  width: 93%;
+}
+
+.create-book-submit:hover {
+  background-color: white;
+  color: #40d9ac;
+  border-color: #40d9ac;
+}

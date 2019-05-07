@@ -10,6 +10,7 @@
 #not-found-background h1 {
   position: absolute;
   color: white;
+  text-shadow: 2px 2px 0px rgb(0, 0, 0);
   top: 30%;
   left: 30%;
 }

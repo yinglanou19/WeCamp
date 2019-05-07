@@ -8,10 +8,12 @@ import ListingCreateForm from "./listing/listing_create_form";
 import ListingDetail from "./listing/list_detail";
 import BookingCollection from "./booking/booking_collection";
 import HeaderContainer from "../components/greeting/greeting_container";
+import Modal from "./modal/modal";
 
 const App = () => (
   <>
     <HeaderContainer />
+    <Modal />
     <Switch>
       <Route exact path="/" component={Home} />
       <Route path="/listings/:listingId" component={ListingDetail} />

@@ -1,0 +1,55 @@
+.list-prev-link {
+  text-decoration: none;
+}
+
+.list-preview-container {
+  height: 300px;
+  width: 300px;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  color: black;
+}
+.list-preview-container:hover {
+  background: #f9f9f9;
+  cursor: pointer;
+}
+
+.list-image-container {
+  height: 60%;
+  width: 100%;
+}
+
+.list-image-container img {
+  height: 100%;
+  width: 100%;
+}
+.list-title-container {
+  height: 25%;
+  width: 100%;
+  font-family: Calibre, Helvetica, Arial, sans-serif;
+}
+
+.list-price-container {
+  height: 15%;
+  width: 100%;
+}
+
+.list-title {
+  height: 30%;
+  width: 100%;
+  padding-left: 15px;
+  padding-top: 15px;
+  font-size: 18px;
+}
+.list-subtitle {
+  font-size: 12px;
+  color: gray;
+  padding-left: 15px;
+}
+.list-price-label {
+  float: right;
+  padding-right: 15px;
+  padding-top: 10px;
+  font-family: Calibre, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+}
