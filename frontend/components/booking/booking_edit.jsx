@@ -1,7 +1,7 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
-import updateBooking from "../../actions/booking_actions";
+import { updateBooking } from "../../actions/booking_actions";
 
 class BookingEdit extends React.Component {
   constructor(props) {
@@ -13,6 +13,7 @@ class BookingEdit extends React.Component {
       id: this.props.booking.id,
       listing_id: this.props.booking.listingId
     };
+    debugger;
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   update(field) {
@@ -47,13 +48,11 @@ class BookingEdit extends React.Component {
           <input
             type="date"
             value={this.state.check_in}
-            placeholder="Check In"
             onChange={this.update("check_in")}
           />
           <input
             type="date"
             value={this.state.check_out}
-            placeholder="Check Out"
             onChange={this.update("check_out")}
           />
           <input
@@ -61,7 +60,6 @@ class BookingEdit extends React.Component {
             step="1"
             min="1"
             max={this.props.listing.maxCapacity}
-            praceholder="number of Guests"
             onChange={this.update("num_guests")}
           />
           <input type="submit" value="change book!" />
@@ -72,7 +70,8 @@ class BookingEdit extends React.Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  let booking = state.entities.bookings[ownProps.match.params.bookingId];
+  let booking =
+    state.entities.bookings[parseInt(ownProps.match.params.bookingId)];
   let listing = state.entities.listings[booking.listingId];
   return {
     booking,
@@ -81,7 +80,7 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  updateBooking: () => dispatch(updateBooking())
+  updateBooking: booking => dispatch(updateBooking(booking))
 });
 
 export default withRouter(
