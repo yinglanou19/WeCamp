@@ -1,0 +1,81 @@
+.listing-create-container {
+  min-height: 800px;
+  width: 100%;
+}
+.listing-create-header-dummy {
+  height: 70px;
+  width: 100%;
+}
+.listing-create-form {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  height: 100%;
+  width: 57%;
+  margin-top: 30px;
+  margin-left: 10%;
+}
+.listing-create-nums {
+  width: 70%;
+  margin: 10px auto;
+}
+.listing-create-title,
+.listing-create-description,
+.listing-create-long,
+.listing-create-lat,
+.listing-create-address,
+.listing-create-price,
+.listing-create-capacity {
+  color: black;
+  font-size: 15px;
+  margin: 10px auto;
+  padding: 15px;
+  border: 1px solid black;
+  display: block;
+  width: 70%;
+}
+
+.listing-create-description {
+  height: 100px;
+}
+
+.listing-create-nums {
+  display: flex;
+  justify-content: space-between;
+}
+.listing-create-long,
+.listing-create-lat,
+.listing-create-price,
+.listing-create-capacity {
+  width: 30%;
+  margin: 10px;
+}
+
+.listing-create-button-div {
+  display: inline-block;
+  width: 100%;
+}
+
+.listing-create-submit {
+  margin: 40px;
+  border: 3px solid #40d9ac;
+  background-color: #40d9ac; /* Green */
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100px;
+  padding: 5px;
+  float: right;
+}
+.listing-create-submit:hover {
+  background-color: white;
+  color: #40d9ac;
+  border-color: #40d9ac;
+}
+.listing-create-question {
+  font-family: "Calibre", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 30px;
+  font-size: 20px;
+}
