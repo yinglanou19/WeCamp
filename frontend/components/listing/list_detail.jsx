@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import BookingCreateForm from "../booking/create_booking";
 import { fetchHost } from "../../actions/listing_actions";
+import ListDetailMore from "./list_detail_more";
 import "./list_detail.css";
 class ListingDetail extends React.Component {
   componentDidMount() {
@@ -21,12 +22,13 @@ class ListingDetail extends React.Component {
         <div className="listing-middle-container">
           <div className="listing-detail-container-div">
             <div className="listing-detail-title-div">
-              <p>{this.props.listing.address}</p>
-              <p>{this.props.listing.title}</p>
+              <p id="listing-detail-address">{this.props.listing.address}</p>
+              <p id="listing-detail-title">{this.props.listing.title}</p>
             </div>
             <div className="listing-detail-description-div">
               <p id="listing-detail-host">
-                Host: {this.props.users[this.props.listing.hostId].username}
+                Host by: <br />
+                {this.props.users[this.props.listing.hostId].username}
               </p>
               <p id="listing-detail-des">{this.props.listing.description}</p>
             </div>
@@ -39,7 +41,9 @@ class ListingDetail extends React.Component {
             />
           </div>
         </div>
-        <div className="listing-detail-hardcode-container" />
+        <div className="listing-detail-hardcode-container">
+          <ListDetailMore />
+        </div>
       </div>
     );
   }

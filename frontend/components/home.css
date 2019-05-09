@@ -75,6 +75,7 @@
   position: relative;
 }
 .header-dropdown-div {
+  background: white;
   display: none;
   position: absolute;
   width: 100px;

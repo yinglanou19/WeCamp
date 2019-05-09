@@ -9,12 +9,23 @@
 
 .listing-detail-description-div {
   display: flex;
+  border-top: 1px solid #ebebeb;
 }
+
+.listing-detail-container-div {
+  padding-left: 65px;
+  padding-right: 40px;
+}
+
 #listing-detail-host {
   width: 30%;
+  font-family: "Calibre", Helvetica, Arial, sans-serif;
+  color: #333333;
 }
 #listing-detail-des {
   width: 70%;
+  color: #333333;
+  font-family: "Calibre", Helvetica, Arial, sans-serif;
 }
 
 .listing-detail-image-container {
@@ -36,4 +47,23 @@
 
 .listing-detail-hardcode-container {
   height: 700px;
+  width: 60%;
+  padding-left: 5%;
+}
+
+#listing-detail-address {
+  color: #656565;
+  margin-top: 35px;
+  font-family: "Calibre", Helvetica, Arial, sans-serif;
+}
+
+#listing-detail-title {
+  margin: 0;
+  font-size: 42px;
+  color: #333333;
+  font-family: "Calibre", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
+.listing-detail-title-div {
+  margin-bottom: 25px;
 }
