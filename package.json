@@ -44,6 +44,7 @@
   },
   "devDependencies": {
     "css-loader": "^2.1.1",
+    "redux-devtools-extension": "^2.13.8",
     "style-loader": "^0.23.1"
   }
 }

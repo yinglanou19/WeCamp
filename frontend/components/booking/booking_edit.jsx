@@ -1,8 +1,7 @@
 import React from "react";
-import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { updateBooking } from "../../actions/booking_actions";
-
+import { closeModal } from "../../actions/modal_actions";
 class BookingEdit extends React.Component {
   constructor(props) {
     super(props);
@@ -13,7 +12,6 @@ class BookingEdit extends React.Component {
       id: this.props.booking.id,
       listing_id: this.props.booking.listingId
     };
-    debugger;
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   update(field) {
@@ -25,10 +23,9 @@ class BookingEdit extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+
     const b = Object.assign({}, this.state);
-    this.props
-      .updateBooking(b)
-      .then(() => this.props.history.push("/bookings"));
+    this.props.updateBooking(b).then(() => this.props.closeModal());
   }
 
   // renderErrors() {
@@ -44,24 +41,34 @@ class BookingEdit extends React.Component {
   render() {
     return (
       <div>
+        <div className="" />
         <form onSubmit={this.handleSubmit}>
-          <input
-            type="date"
-            value={this.state.check_in}
-            onChange={this.update("check_in")}
-          />
-          <input
-            type="date"
-            value={this.state.check_out}
-            onChange={this.update("check_out")}
-          />
-          <input
-            type="number"
-            step="1"
-            min="1"
-            max={this.props.listing.maxCapacity}
-            onChange={this.update("num_guests")}
-          />
+          <div>
+            <div>From: </div>
+            <input
+              type="date"
+              value={this.state.check_in}
+              onChange={this.update("check_in")}
+            />
+          </div>
+          <div>
+            <div>To: </div>
+            <input
+              type="date"
+              value={this.state.check_out}
+              onChange={this.update("check_out")}
+            />
+          </div>
+          <div>
+            <div>Guests: </div>
+            <input
+              type="number"
+              step="1"
+              min="1"
+              max={this.props.listing.maxCapacity}
+              onChange={this.update("num_guests")}
+            />
+          </div>
           <input type="submit" value="change book!" />
         </form>
       </div>
@@ -69,9 +76,8 @@ class BookingEdit extends React.Component {
   }
 }
 
-const mapStateToProps = (state, ownProps) => {
-  let booking =
-    state.entities.bookings[parseInt(ownProps.match.params.bookingId)];
+const mapStateToProps = state => {
+  let booking = state.entities.bookingToBeEdited;
   let listing = state.entities.listings[booking.listingId];
   return {
     booking,
@@ -80,12 +86,11 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  updateBooking: booking => dispatch(updateBooking(booking))
+  updateBooking: booking => dispatch(updateBooking(booking)),
+  closeModal: () => dispatch(closeModal())
 });
 
-export default withRouter(
-  connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(BookingEdit)
-);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(BookingEdit);

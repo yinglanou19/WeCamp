@@ -1,0 +1,39 @@
+.listing-detail-head-dummy-div {
+  height: 70px;
+  width: 100%;
+}
+
+.listing-middle-container {
+  display: flex;
+}
+
+.listing-detail-description-div {
+  display: flex;
+}
+#listing-detail-host {
+  width: 30%;
+}
+#listing-detail-des {
+  width: 70%;
+}
+
+.listing-detail-image-container {
+  height: 550px;
+  width: 100%;
+}
+
+.listing-detail-image-container img {
+  height: 100%;
+  width: 80%;
+}
+
+.listing-booking-form-container {
+  position: -webkit-sticky;
+  position: sticky;
+  margin-right: 140px;
+  float: right;
+}
+
+.listing-detail-hardcode-container {
+  height: 700px;
+}

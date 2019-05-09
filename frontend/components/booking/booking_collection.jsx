@@ -1,23 +1,30 @@
 import { connect } from "react-redux";
-import { fetchBookings } from "../../actions/booking_actions";
+import { fetchBookings, deleteBooking } from "../../actions/booking_actions";
 import React from "react";
 import BookingShow from "./booking_show";
-import { deleteBooking } from "../../actions/booking_actions";
+import { fetchListings } from "../../actions/listing_actions";
+import { openModal } from "../../actions/modal_actions";
+import { receiveBookingToEdit } from "../../actions/booking_actions";
+import "./booking_collection.css";
 class BookingCollection extends React.Component {
   componentDidMount() {
-    this.props.fetchBookings();
+    this.props.fetchListings().then(this.props.fetchBookings);
+    // this.props.fetchBookings();
   }
 
   render() {
     return (
+      this.props.listings &&
       this.props.bookings && (
-        <ul>
+        <ul className="booking-collection-ul">
           {this.props.bookings.map(booking => (
             <li key={booking.id}>
               <BookingShow
                 booking={booking}
                 listing={this.props.listings[booking.listingId]}
                 deleteBooking={this.props.deleteBooking}
+                openModal={this.props.openModal}
+                receiveEditBooking={this.props.receiveEditBooking}
               />
             </li>
           ))}
@@ -35,7 +42,13 @@ const mapStateToProps = ({ entities }) => {
 };
 const mapDispatchToProps = dispatch => ({
   fetchBookings: () => dispatch(fetchBookings()),
-  deleteBooking: id => dispatch(deleteBooking(id))
+  deleteBooking: id => dispatch(deleteBooking(id)),
+  fetchListings: () => dispatch(fetchListings()),
+  openModal: formType => dispatch(openModal(formType)),
+  receiveEditBooking: booking => {
+    dispatch(receiveBookingToEdit(booking));
+    dispatch(openModal("edit_booking"));
+  }
 });
 
 export default connect(

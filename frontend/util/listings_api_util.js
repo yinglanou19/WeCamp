@@ -16,3 +16,16 @@ export const fetchListing = id =>
     method: "get",
     url: `/api/listings/${id}`
   });
+
+export const fetchSearchResult = condition =>
+  $.ajax({
+    method: "get",
+    url: `/api/listings?search=${condition}`
+  });
+// encodeURIComponent()
+
+export const fetchHost = id =>
+  $.ajax({
+    method: "get",
+    url: `api/users/${id}`
+  });

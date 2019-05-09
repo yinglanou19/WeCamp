@@ -1,7 +1,11 @@
 class Api::ListingsController < ApplicationController
     before_action :require_logged_in, only:[:create]
     def index
-        @listings = Listing.all
+        if (params[:search]!=nil)
+            @listings = Listing.where("lower(title) like ? OR lower(address) like ? " , "%#{params[:search]}%", "%#{params[:search]}%"  )
+        else
+        @listings = Listing.all 
+        end
     end
 
     def create
@@ -16,6 +20,8 @@ class Api::ListingsController < ApplicationController
 
     def show
     end
+
+    
 
     private
 

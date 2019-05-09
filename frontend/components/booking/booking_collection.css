@@ -1,0 +1,10 @@
+.booking-collection-ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.booking-collection-ul li {
+  margin: 15px;
+}

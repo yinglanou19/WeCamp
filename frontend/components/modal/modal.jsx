@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import { closeModal } from "../../actions/modal_actions";
 import { clearSessionErrors } from "../../actions/session_actions";
 import "./modal.css";
+import EditBooking from "../booking/booking_edit"
 function Modal({ isOpen, formType, closeModal }) {
   let component;
   switch (formType) {
@@ -13,6 +14,8 @@ function Modal({ isOpen, formType, closeModal }) {
       break;
     case "signup":
       component = <SignupFormContainer />;
+      case "edit_booking":
+      component= <EditBooking />
       break;
     default:
       return null;

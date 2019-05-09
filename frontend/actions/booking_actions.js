@@ -4,6 +4,7 @@ export const RECEIVE_BOOKING = "RECEIVE_BOOKING";
 export const RECEIVE_BOOKINGS = "RECEIVE_BOOKINGS";
 export const RECEIVE_BOOKING_ERRORS = "RECEIVE_BOOKING_ERRORS";
 export const REMOVE_BOOKING = "REMOVE_BOOKING";
+export const RECEIVE_BOOKING_TO_EDIT = "RECEIVE_BOOKING_TO_EDIT";
 const receiveBooking = booking => ({
   type: RECEIVE_BOOKING,
   booking
@@ -22,6 +23,11 @@ const receiveBookings = bookings => ({
 const removeBooking = id => ({
   type: REMOVE_BOOKING,
   id
+});
+
+export const receiveBookingToEdit = booking => ({
+  type: RECEIVE_BOOKING_TO_EDIT,
+  booking
 });
 
 export const addBooking = booking => dispatch => {
