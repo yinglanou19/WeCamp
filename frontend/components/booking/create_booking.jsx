@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { addBooking } from "../../actions/booking_actions";
 import { withRouter } from "react-router-dom";
 import "./create_booking.css";
+import Errors from "../errors/errors";
 class BookingCreateForm extends React.Component {
   constructor(props) {
     super(props);
@@ -44,7 +45,9 @@ class BookingCreateForm extends React.Component {
           <div>${this.props.price}</div>
           <div className="create-book-per-night">per night</div>
         </div>
-
+        <div className="create-book-error-container">
+          <Errors errors={this.props.errors} />
+        </div>
         <form onSubmit={this.handleSubmit}>
           <div className="create-book-data-container">
             <div>
@@ -113,7 +116,7 @@ class BookingCreateForm extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  p: state
+  errors: state.errors.booking
 });
 
 const mapDispatchToProps = dispatch => ({

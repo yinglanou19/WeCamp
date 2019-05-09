@@ -9,9 +9,10 @@
 .listing-create-form {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   height: 100%;
-  width: 57%;
+  width: 50%;
   margin-top: 30px;
   margin-left: 10%;
+  background: white;
 }
 .listing-create-nums {
   width: 70%;
@@ -78,4 +79,21 @@
   text-align: center;
   padding-top: 30px;
   font-size: 20px;
+}
+
+.listing-form-outer-container {
+  display: flex;
+  background: #f9f9f9;
+}
+
+.list-create-msg-box {
+  font-family: "Calibre", Helvetica, Arial, sans-serif;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  height: 100%;
+  margin-left: 60px;
+  padding: 10px;
+  font-size: 20px;
+  width: 20%;
+  margin-top: 50px;
+  background: white;
 }

@@ -2,6 +2,8 @@ import React from "react";
 import { connect } from "react-redux";
 import { updateBooking } from "../../actions/booking_actions";
 import { closeModal } from "../../actions/modal_actions";
+import Errors from "../errors/errors";
+import "./booking_edit.css";
 function formatDate(input) {
   let year = input.substring(0, 4);
   let month = input.substring(5, 7);
@@ -47,10 +49,15 @@ class BookingEdit extends React.Component {
   render() {
     return (
       <div>
-        <div className="" />
-        <form onSubmit={this.handleSubmit}>
+        <div className="booking-edit-title">
+          <Errors errors={this.props.errors} />
+          <h3>Modify your trip to:</h3>
+          <h4>{this.props.listing.title}</h4>
+        </div>
+
+        <form onSubmit={this.handleSubmit} className="booking-editing-form">
           <div>
-            <div>From: </div>
+            <div className="booking-from-to">From: </div>
             <input
               type="date"
               value={this.state.check_in}
@@ -58,7 +65,7 @@ class BookingEdit extends React.Component {
             />
           </div>
           <div>
-            <div>To: </div>
+            <div className="booking-from-to">To: </div>
             <input
               type="date"
               value={this.state.check_out}
@@ -66,7 +73,7 @@ class BookingEdit extends React.Component {
             />
           </div>
           <div>
-            <div>Guests: </div>
+            <div className="booking-from-to">Guests: </div>
             <input
               type="number"
               step="1"
@@ -76,7 +83,11 @@ class BookingEdit extends React.Component {
               onChange={this.update("num_guests")}
             />
           </div>
-          <input type="submit" value="change book!" />
+          <input
+            type="submit"
+            value="Confirm"
+            className="booking-edit-button"
+          />
         </form>
       </div>
     );
@@ -86,9 +97,11 @@ class BookingEdit extends React.Component {
 const mapStateToProps = state => {
   let booking = state.entities.bookingToBeEdited;
   let listing = state.entities.listings[booking.listingId];
+  let errors = state.errors.booking;
   return {
     booking,
-    listing
+    listing,
+    errors
   };
 };
 

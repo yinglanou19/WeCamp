@@ -1,0 +1,31 @@
+.booking-edit-title {
+  font-family: "Calibre", Helvetica, Arial, sans-serif;
+}
+
+.booking-edit-button {
+  margin: 10px;
+  border: 3px solid #40d9ac;
+  background-color: #40d9ac; /* Green */
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  width: 83%;
+}
+.booking-edit-button:hover {
+  background-color: white;
+  color: #40d9ac;
+  border-color: #40d9ac;
+}
+
+.booking-editing-form div {
+  padding: 10px;
+}
+
+.booking-from-to {
+  font-family: "Calibre", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+}

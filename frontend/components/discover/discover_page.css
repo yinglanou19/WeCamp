@@ -1,3 +1,17 @@
 .discover-page-head-dummy {
   height: 80px;
 }
+
+.discover-container {
+}
+
+.discover-text {
+  font-family: "Calibre", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 50px;
+}
+
+.discover-list-collection {
+  width: 60%;
+}

@@ -1,0 +1,11 @@
+.errors-ul {
+  margin: 0;
+  padding: 0;
+  position: center;
+}
+
+.errors-ul li {
+  list-style: none;
+  color: #b38b01;
+  background-color: #fef2d6;
+}

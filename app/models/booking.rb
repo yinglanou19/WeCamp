@@ -24,8 +24,10 @@ class Booking < ApplicationRecord
     end
 
     def start_must_come_before_end
+        
         errors[:base] << 'must specify a check in date' unless check_in
         errors[:base] << 'must specify a check out date' unless check_out
+        return nil unless check_in && check_out
         errors[:base] << 'check in date must come before check out date' if check_in > check_out
     end
 
