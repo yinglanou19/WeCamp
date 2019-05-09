@@ -2,12 +2,18 @@ import React from "react";
 import { connect } from "react-redux";
 import { updateBooking } from "../../actions/booking_actions";
 import { closeModal } from "../../actions/modal_actions";
+function formatDate(input) {
+  let year = input.substring(0, 4);
+  let month = input.substring(5, 7);
+  let day = input.substring(8, 10);
+  return year + "-" + month + "-" + day;
+}
 class BookingEdit extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      check_in: this.props.booking.checkIn,
-      check_out: this.props.booking.checkOut,
+      check_in: formatDate(this.props.booking.checkIn),
+      check_out: formatDate(this.props.booking.checkOut),
       num_guests: this.props.booking.numGuests,
       id: this.props.booking.id,
       listing_id: this.props.booking.listingId
@@ -64,6 +70,7 @@ class BookingEdit extends React.Component {
             <input
               type="number"
               step="1"
+              value={this.state.num_guests}
               min="1"
               max={this.props.listing.maxCapacity}
               onChange={this.update("num_guests")}

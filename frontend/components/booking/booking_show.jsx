@@ -18,8 +18,6 @@ export default function BookingShow({
 }) {
   let indate = new Date(formatDate(booking.checkIn));
   let outdate = new Date(formatDate(booking.checkOut));
-  console.log("in  " + indate);
-  console.log("out " + outdate);
   return (
     <div>
       <div className="booking-show-dummy-div" />
