@@ -4,7 +4,7 @@ import ListingPreview from "./list_preview";
 import { searchListings } from "../../actions/listing_actions";
 import "./listing_collection.css";
 import { withRouter } from "react-router-dom";
-
+import "./list_results.css";
 class ListingResults extends React.Component {
   componentDidMount() {
     this.props.searchListings(this.props.match.params.value);
@@ -12,13 +12,16 @@ class ListingResults extends React.Component {
   render() {
     return (
       this.props.listings && (
-        <ul className="listing-collection-ul">
-          {this.props.listings.map(listing => (
-            <li key={listing.id}>
-              <ListingPreview listing={listing} />
-            </li>
-          ))}
-        </ul>
+        <div>
+          <div className="result-page-head-dummy" />
+          <ul className="listing-collection-ul">
+            {this.props.listings.map(listing => (
+              <li key={listing.id}>
+                <ListingPreview listing={listing} />
+              </li>
+            ))}
+          </ul>
+        </div>
       )
     );
   }
