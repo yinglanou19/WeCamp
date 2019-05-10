@@ -1,12 +1,14 @@
 .create-book-form-container {
-  height: 210px;
-  width: 300px;
+  height: 230px;
+  width: 330px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  /* background: rgb(185, 234, 202); */
 }
 
 .create-book-price-container {
   height: 33%;
   width: 100%;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); */
   font-family: Calibre, Helvetica, Arial, sans-serif;
 }
 .create-book-price-container div {
@@ -26,19 +28,22 @@
   height: 50%;
   width: 100%;
   display: flex;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-top: 1px solid lightgray; /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); */
 }
 .create-book-error-container {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 .create-book-data-container div input {
   width: 100%;
+  margin-top: 5px;
 }
 
 .create-book-button-container {
   height: 50%;
   width: 100%;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-top: 1px solid lightgray;
+
+  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); */
 }
 
 .create-book-per-night {
@@ -48,7 +53,9 @@
 .create-book-data-container > div {
   width: 33%;
   height: 100%;
-  border: 1px solid black;
+  /* border: 1px solid grey; */
+  padding: 5px;
+  margin-top: 5px;
 }
 
 .create-book-submit {
@@ -69,4 +76,10 @@
   background-color: white;
   color: #40d9ac;
   border-color: #40d9ac;
+}
+
+.booking-data-title-div {
+  font-family: "Calibre", Helvetica, Arial, sans-serif;
+  text-align: center;
+  font-size: 20px;
 }

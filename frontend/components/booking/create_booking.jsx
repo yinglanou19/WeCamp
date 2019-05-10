@@ -51,6 +51,7 @@ class BookingCreateForm extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <div className="create-book-data-container">
             <div>
+              <div className="booking-data-title-div">Check in</div>
               <input
                 type="date"
                 value={this.state.check_in}
@@ -59,6 +60,7 @@ class BookingCreateForm extends React.Component {
               />
             </div>
             <div>
+              <div className="booking-data-title-div">Check out</div>
               <input
                 type="date"
                 value={this.state.check_out}
@@ -67,6 +69,7 @@ class BookingCreateForm extends React.Component {
               />
             </div>
             <div>
+              <div className="booking-data-title-div">Guests</div>
               <input
                 type="number"
                 step="1"
