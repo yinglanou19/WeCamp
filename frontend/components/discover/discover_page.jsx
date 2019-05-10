@@ -9,7 +9,7 @@ export default function discoverPage() {
       <div className="discover-page-head-dummy" />
       <div className="discover-container">
         <div className="discover-text">
-          <h3>Your search results:</h3>
+          <h3>Discover Camping...</h3>
         </div>
         <div className="discover-content-box">
           <div className="discover-list-collection">

@@ -34,7 +34,7 @@ class Home extends React.Component {
             <p>
               <b>Recommend to you</b>
             </p>
-            <ListingCollection />
+            <ListingCollection home={true} />
           </div>
           <div className="home-discover-container">
             <p>

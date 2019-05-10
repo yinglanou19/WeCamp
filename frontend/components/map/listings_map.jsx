@@ -13,7 +13,7 @@ class ListingsMap extends React.Component {
     // wrap this.mapNode in a Google Map
     this.map = new google.maps.Map(this.mapNode, mapOptions);
     this.MarkerManager = new MarkerManager(this.map);
-    debugger;
+
     this.MarkerManager.updateMarkers(this.props.listings);
   }
 
@@ -26,7 +26,6 @@ class ListingsMap extends React.Component {
 }
 
 const mapStateToProps = ({ entities }) => {
-  debugger;
   return {
     listings: Object.values(entities.listings)
   };

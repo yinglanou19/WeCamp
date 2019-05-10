@@ -9,6 +9,19 @@ class ListingCollection extends React.Component {
   }
 
   render() {
+    if (this.props.ownProps.home) {
+      return (
+        this.props.listings && (
+          <ul className="listing-collection-ul">
+            {this.props.listings.slice(0, 3).map(listing => (
+              <li key={listing.id}>
+                <ListingPreview listing={listing} />
+              </li>
+            ))}
+          </ul>
+        )
+      );
+    }
     return (
       this.props.listings && (
         <ul className="listing-collection-ul">
@@ -23,9 +36,12 @@ class ListingCollection extends React.Component {
   }
 }
 
-const mapStateToProps = ({ entities }) => ({
-  listings: Object.values(entities.listings)
-});
+const mapStateToProps = (state, ownProps) => {
+  return {
+    listings: Object.values(state.entities.listings),
+    ownProps
+  };
+};
 const mapDispatchToProps = dispatch => ({
   fetchListings: () => dispatch(fetchListings())
 });

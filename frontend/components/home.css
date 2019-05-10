@@ -121,6 +121,7 @@
   margin-top: 50px;
   position: relative;
   left: 5%;
+  max-width: 1300px;
 }
 
 .discover-imgs-ul {
