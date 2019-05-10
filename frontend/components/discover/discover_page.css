@@ -5,6 +5,9 @@
 .discover-container {
 }
 
+.discover-content-box {
+  display: flex;
+}
 .discover-text {
   font-family: "Calibre", Helvetica, Arial, sans-serif;
   font-size: 20px;
@@ -14,4 +17,9 @@
 
 .discover-list-collection {
   width: 60%;
+}
+
+.map-box {
+  width: 40%;
+  padding-right: 35px;
 }

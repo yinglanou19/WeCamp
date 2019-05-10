@@ -9,8 +9,10 @@ import HeaderContainer from "../components/greeting/greeting_container";
 import Modal from "./modal/modal";
 import ListingResults from "./listing/listing_results";
 import DiscoverPage from "./discover/discover_page";
+import Footer from "./footer/footer";
+import "./footer/footer.css";
 const App = () => (
-  <>
+  <div id="app-whole-div">
     <HeaderContainer />
     <Modal />
     <Switch>
@@ -23,7 +25,10 @@ const App = () => (
       <Route path="/404" component={NotFoundPage} />
       <Redirect to="/404" />
     </Switch>
-  </>
+    {/* <div id="footer-div">
+      <Footer />
+    </div> */}
+  </div>
 );
 
 export default App;

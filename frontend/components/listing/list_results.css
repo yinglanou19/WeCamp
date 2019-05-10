@@ -1,3 +1,11 @@
 .result-page-head-dummy {
   height: 70px;
 }
+
+.listing-result-collection {
+  width: 60%;
+}
+
+.listing-result-container {
+  display: flex;
+}

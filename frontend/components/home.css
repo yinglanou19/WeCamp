@@ -2,8 +2,9 @@
   height: 70px;
 }
 .page-outline-container {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
+  /* background: green; */
 }
 .search-intro-text {
   position: relative;
