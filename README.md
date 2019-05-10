@@ -1,24 +1,38 @@
-# README
+#Wecamp
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
 
-* Ruby version
+Wecamp is a clone of Hipcamp. User can browse campsite listings and book their trip. User can also manage their bookings. Wecamp also allows user to search campsites.
 
-* System dependencies
+Wecamp is builded using Rails and PostgreSQL on backend, React and Redux on frontend.
 
-* Configuration
+##Features
 
-* Database creation
+*Secure frontend to backend user authentication using BCrypt.
 
-* Database initialization
+*Display campsite details and allow booking.
 
-* How to run the test suite
+*Edit/delete bookings.
 
-* Services (job queues, cache servers, search engines, etc.)
+##Install
 
-* Deployment instructions
+`$ git clone https://github.com/yinglanou19/WeCamp.git`
+`$ cd WeCamp`
+`$ npm install`
+`$ bundle install`
 
-* ...
+Database initialization:
+
+`$ bundle exec rails db:setup`
+
+Deployment instructions:
+
+`$ npm start`
+`$ bundle exec rails s`
+
+##Languages
+
+Ruby
+Javascript
+HTML
+CSS
