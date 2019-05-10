@@ -23,21 +23,21 @@ daily_price:110, max_capacity:4})
 
 l5= Listing.create({title:"Enchanted Forest Millie Campsite",description:"Forest campsites: Set in an old growth redwood grove looking to the west across a pasture. You'll have the best views of the animals as they graze, and they might even walk right through your campsite in the early morning hours! You can always help us feed them at 7:30 AM or 4:30 PM. Don't forget your flashlight!",
 host_id: u1.id, long:-122.215588, lat:37.315607, address:"California Shanti Permaculture Farm", 
-daily_price:110, max_capacity:4})
+daily_price:95, max_capacity:6})
 l6 = Listing.create({title:"Secluded Vineyard Walk-In",description:"Yosemite Garden Camp is on 10 acres of grassy meadows, pine and oak trees, and manzanita chaparral in the lower Sierra Nevada mountains, near the town of Groveland, outside Yosemite National Park. The property includes a large vegetable garden and a small vineyard, and borders Federal Bureau of Land Management land. Most of the property has sweeping views across the Central Valley to the Coast Ranges to the west. Sunsets are breathtaking.",
 host_id: u1.id, long:-121.995588, lat:37.285786, address:"California Yosemite Garden Camp", 
-daily_price:110, max_capacity:4})
+daily_price:127, max_capacity:3})
 
 l1 = Listing.create({title:"Mission Peak Wine",description:"This property sits at 1600ft on a 150 acre ranch nestled just beneath the famous hiking trails of Mission Peak. ",
-host_id: u1.id, long:-122.206088, lat:37.301607, address:"100 Main St, Los Altos, CA 94022", 
+host_id: u1.id, long:-122.206088, lat:37.301607, address:"California Mission Peak Camp", 
 daily_price:84, max_capacity:4})
 
 l2 = Listing.create({title:"Camp Nauvoo",description:"Camp Nauvoo was originally bought by the LDS church in the 1960's for a girl's camp. The Boy Scouts of America bought the camp back in 2011. The Rose family bought the property in 2016 with the intent to continue the tradition of tent camping as well as creating some opportunities for glamping, family reunions and events. ",
-host_id: u1.id, long:-122.208088, lat:37.311607, address:"200 Main St, Los Altos, CA 94022", 
+host_id: u1.id, long:-122.208088, lat:37.311607, address:"California Yosemite National Park", 
 daily_price:90, max_capacity:2})
 
 l3 = Listing.create({title:"Platform Canvas Tent on Creek",description:"This is a family private owned small campground (16 sites only) located on the outskirts of Placerville. The property features 86.5 secluded Tahoe like acres with beautiful year-round Weber Creek. The camp sites are placed along the creek or the bluff overlooking the creek.",
-host_id: u1.id, long:-122.216088, lat:37.307607, address:"300 Main St, Los Altos, CA 94022", 
+host_id: u1.id, long:-122.216088, lat:37.307607, address:"California Inyo National Forest", 
 daily_price:98, max_capacity:3})
 
 file1 = open("https://cdn.pixabay.com/photo/2016/02/18/22/16/tent-1208201_960_720.jpg")
