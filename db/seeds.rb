@@ -37,7 +37,7 @@ host_id: u1.id, long:-122.208088, lat:37.311607, address:"California Yosemite Na
 daily_price:90, max_capacity:2})
 
 l3 = Listing.create({title:"Platform Canvas Tent on Creek",description:"This is a family private owned small campground (16 sites only) located on the outskirts of Placerville. The property features 86.5 secluded Tahoe like acres with beautiful year-round Weber Creek. The camp sites are placed along the creek or the bluff overlooking the creek.",
-host_id: u1.id, long:-122.216088, lat:37.307607, address:"California Inyo National Forest", 
+host_id: u1.id, long:-122.216088, lat:37.307607, address:"California Inyo National Forest Campsite", 
 daily_price:98, max_capacity:3})
 
 file1 = open("https://cdn.pixabay.com/photo/2016/02/18/22/16/tent-1208201_960_720.jpg")
