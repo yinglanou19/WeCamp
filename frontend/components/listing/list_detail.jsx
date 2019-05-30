@@ -13,12 +13,14 @@ class ListingDetail extends React.Component {
     if (!this.props.users.hasOwnProperty(`${this.props.listing.hostId}`)) {
       return null;
     }
+    let sampleImg = <img src="no_image.jpg" />;
+    if (this.props.listing.imgUrls.length > 0) {
+      sampleImg = <img src={this.props.listing.imgUrls[0]} />;
+    }
     return (
       <div>
         <div className="listing-detail-head-dummy-div" />
-        <div className="listing-detail-image-container">
-          <img src={this.props.listing.imgUrls[0]} />
-        </div>
+        <div className="listing-detail-image-container">{sampleImg}</div>
         <div className="listing-middle-container">
           <div className="listing-detail-container-div">
             <div className="listing-detail-title-div">

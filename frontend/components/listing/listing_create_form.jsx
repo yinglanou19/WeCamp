@@ -38,7 +38,10 @@ class ListingCreateForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const l = Object.assign({}, this.state);
-    this.props.addListing(l).then(() => this.props.history.push("/"));
+    this.props.addListing(l).then(l => {
+      // debugger;
+      return this.props.history.push(`listings/${l.listing.id}`);
+    });
   }
   render() {
     return (

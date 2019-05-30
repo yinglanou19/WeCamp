@@ -5,10 +5,16 @@ export const RECEIVE_LISTINGS = "RECEIVE_LISTINGS";
 export const RECEIVE_LISTING_ERRORS = "RECEIVE_LISTING_ERRORS";
 export const RECEIVE_RESULTS = "RECEIVE_RESULTS";
 export const RECEIVE_HOST = "RECEIVE_HOST";
-const receiveListing = listing => ({
-  type: RECEIVE_LISTING,
-  listing
-});
+// const receiveListing = listing => ({
+//   type: RECEIVE_LISTING,
+//   listing
+// });
+const receiveListing = listing => {
+  return {
+    type: RECEIVE_LISTING,
+    listing
+  };
+};
 const receiveErrors = errors => ({
   type: RECEIVE_LISTING_ERRORS,
   errors
