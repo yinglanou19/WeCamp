@@ -17,8 +17,11 @@ Wecamp is builded using Rails and PostgreSQL on backend, React and Redux on fron
 ## Install
 
 `$ git clone https://github.com/yinglanou19/WeCamp.git`
+
 `$ cd WeCamp`
+
 `$ npm install`
+
 `$ bundle install`
 
 Database initialization:
@@ -28,6 +31,7 @@ Database initialization:
 Deployment instructions:
 
 `$ npm start`
+
 `$ bundle exec rails s`
 
 ## Languages
