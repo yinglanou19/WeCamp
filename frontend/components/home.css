@@ -1,14 +1,10 @@
 .home-page-dummy-header {
   height: 70px;
 }
-.page-outline-container {
-  min-height: 100vh;
-  width: 100%;
-  /* background: green; */
-}
+
 .search-intro-text {
   position: relative;
-  left: 10%;
+  left: 5%;
 }
 
 .search-intro-first {
@@ -30,7 +26,7 @@
 
 .search-form-container {
   margin-top: 50px;
-  position: relative;
+  /* position: relative; */
   left: 10%;
 }
 .header {
@@ -101,11 +97,21 @@
   margin-right: 15px;
 }
 
-/* ListingCollection */
+.page-outline-container {
+  min-height: 100vh;
+  width: 100%;
+  align-content: center;
+  position: relative;
+}
+
+.page-container {
+  margin: auto;
+  width: 76%;
+}
+
 .listing-container-div {
   padding-top: 35px;
   position: relative;
-  left: 5%;
 }
 
 .listing-container-div p {
@@ -120,7 +126,7 @@
 .home-discover-container {
   margin-top: 50px;
   position: relative;
-  left: 5%;
+
   max-width: 1300px;
 }
 

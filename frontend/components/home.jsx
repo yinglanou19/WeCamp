@@ -17,19 +17,20 @@ class Home extends React.Component {
       <div className="page-outline-container">
         <div className="page-container">
           <div className="home-page-dummy-header" />
-          <div className="search-intro-text">
-            <h2 className="search-intro-first">Find yourself outside.</h2>
-            <div id="search-intro-second-div">
-              <p className="search-intro-second">
-                Book unique camping experiences on over <b>300,000</b>{" "}
-                campsites, ranches, vineyards, public parks and more.
-              </p>
+          <div className="search-container">
+            <div className="search-intro-text">
+              <h2 className="search-intro-first">Find yourself outside.</h2>
+              <div id="search-intro-second-div">
+                <p className="search-intro-second">
+                  Book unique camping experiences on over <b>300,000</b>{" "}
+                  campsites, ranches, vineyards, public parks and more.
+                </p>
+              </div>
+            </div>
+            <div className="search-form-container">
+              <SearchBar />
             </div>
           </div>
-          <div className="search-form-container">
-            <SearchBar />
-          </div>
-
           <div className="listing-container-div">
             <p>
               <b>Recommend to you</b>
