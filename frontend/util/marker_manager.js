@@ -2,6 +2,7 @@ export default class MarkerManager {
   constructor(map) {
     this.map = map;
     this.markers = {};
+    this.bounds = new google.maps.LatLngBounds();
   }
   updateMarkers(listings) {
     // listings is an array here
@@ -15,6 +16,7 @@ export default class MarkerManager {
     Object.keys(this.markers)
       .filter(listingId => !listingsObj[listingId])
       .forEach(listingId => this.removeMarker(this.markers[listingId]));
+    this.map.setZoom(this.map.getZoom() - 1);
   }
 
   createMarkerFromListing(listing) {
@@ -27,6 +29,8 @@ export default class MarkerManager {
 
     // marker.addListener("click", () => this.handleClick(bench));
     this.markers[marker.listingId] = marker;
+    this.bounds.extend(position);
+    this.map.fitBounds(this.bounds);
   }
 
   removeMarker(marker) {

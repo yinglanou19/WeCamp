@@ -43,32 +43,32 @@ class Home extends React.Component {
             </p>
             <ul className="discover-imgs-ul">
               <li>
-                <a href="/#/discover">
+                <a href={`/#/discover/%20`}>
                   <img src="discover1.png" />
                 </a>
               </li>
               <li>
-                <a href="/#/discover">
+                <a href={`/#/discover/%20`}>
                   <img src="discover2.png" />
                 </a>
               </li>
               <li>
-                <a href="/#/discover">
+                <a href={`/#/discover/%20`}>
                   <img src="discover3.png" />
                 </a>
               </li>
               <li>
-                <a href="/#/discover">
+                <a href={`/#/discover/%20`}>
                   <img src="discover4.png" />
                 </a>
               </li>
               <li>
-                <a href="/#/discover">
+                <a href={`/#/discover/%20`}>
                   <img src="discover5.png" />
                 </a>
               </li>
               <li>
-                <a href="/#/discover">
+                <a href={`/#/discover/%20`}>
                   <img src="discover6.png" />
                 </a>
               </li>

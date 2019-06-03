@@ -9,3 +9,7 @@
 .listing-result-container {
   display: flex;
 }
+
+.map-box {
+  padding-top: 30px;
+}

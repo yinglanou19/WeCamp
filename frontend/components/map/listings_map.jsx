@@ -13,12 +13,18 @@ class ListingsMap extends React.Component {
     // wrap this.mapNode in a Google Map
     this.map = new google.maps.Map(this.mapNode, mapOptions);
     this.MarkerManager = new MarkerManager(this.map);
-
     this.MarkerManager.updateMarkers(this.props.listings);
   }
 
   componentDidUpdate() {
     this.MarkerManager.updateMarkers(this.props.listings);
+    // testing code below
+    if (this.props.listings.length > 0) {
+      this.map.setCenter({
+        lat: this.props.listings[0].lat,
+        lng: this.props.listings[0].long
+      });
+    }
   }
   render() {
     return <div id="map-container" ref={map => (this.mapNode = map)} />;
@@ -27,7 +33,7 @@ class ListingsMap extends React.Component {
 
 const mapStateToProps = ({ entities }) => {
   return {
-    listings: Object.values(entities.listings)
+    listings: Object.values(entities.searchResult)
   };
 };
 

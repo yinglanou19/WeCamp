@@ -10,6 +10,7 @@ class ListingResults extends React.Component {
   componentDidMount() {
     this.props.searchListings(this.props.match.params.value);
   }
+
   render() {
     return (
       this.props.listings && (
