@@ -13,7 +13,8 @@ class ListingCreateForm extends React.Component {
       lat: "",
       address: "",
       daily_price: "",
-      max_capacity: ""
+      max_capacity: "",
+      images: []
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -35,11 +36,37 @@ class ListingCreateForm extends React.Component {
   //   );
   // }
 
+  handleFile(e) {
+    // const file = e.currentTarget.files[0];
+    // const reader = new FileReader();
+    // reader.onloadend = () => {
+    //   this.setState({
+    //     images: [reader.result]
+    //   });
+    // };
+    // if (file) {
+    //   reader.readAsDataURL(file);
+    // }
+
+    this.setState({ images: e.target.files });
+  }
+
   handleSubmit(e) {
     e.preventDefault();
-    const l = Object.assign({}, this.state);
-    this.props.addListing(l).then(l => {
-      // debugger;
+    const formData = new FormData();
+    formData.append("listing[title]", this.state.title);
+    formData.append("listing[description]", this.state.description);
+    formData.append("listing[long]", this.state.long);
+    formData.append("listing[lat]", this.state.lat);
+    formData.append("listing[address]", this.state.address);
+    formData.append("listing[daily_price]", this.state.daily_price);
+    formData.append("listing[max_capacity", this.state.max_capacity);
+
+    for (let i = 0; i < this.state.images.length; i++) {
+      formData.append("listing[images][]", this.state.images[i]);
+    }
+
+    this.props.addListing(formData).then(l => {
       return this.props.history.push(`listings/${l.listing.id}`);
     });
   }
@@ -109,6 +136,13 @@ class ListingCreateForm extends React.Component {
                   placeholder="Max Capacity"
                   onChange={this.update("max_capacity")}
                   className="listing-create-capacity"
+                />
+              </div>
+              <div className="image-upload-container">
+                <input
+                  type="file"
+                  onChange={this.handleFile.bind(this)}
+                  multiple
                 />
               </div>
               <div className="listing-create-button-div">
