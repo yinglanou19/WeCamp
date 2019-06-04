@@ -4,6 +4,7 @@ import BookingCreateForm from "../booking/create_booking";
 import { fetchHost } from "../../actions/listing_actions";
 import ListDetailMore from "./list_detail_more";
 import "./list_detail.css";
+import ImageCollection from "./listing_pictures";
 class ListingDetail extends React.Component {
   componentDidMount() {
     this.props.fetchHost(this.props.listing.hostId);
@@ -16,6 +17,7 @@ class ListingDetail extends React.Component {
     let sampleImg = <img src="no_image.jpg" />;
     if (this.props.listing.imgUrls.length > 0) {
       sampleImg = <img src={this.props.listing.imgUrls[0]} />;
+      // sampleImg = <ImageCollection images={this.props.listing.imgUrls} />;
     }
     return (
       <div>
