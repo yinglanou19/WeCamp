@@ -106,12 +106,15 @@
 
 .page-container {
   margin: auto;
-  width: 76%;
+  width: 85%;
+  max-width: 1300px;
 }
 
 .listing-container-div {
   padding-top: 35px;
   position: relative;
+  width: 85%;
+  margin: auto;
 }
 
 .listing-container-div p {
@@ -126,8 +129,8 @@
 .home-discover-container {
   margin-top: 50px;
   position: relative;
-
-  max-width: 1300px;
+  margin: auto;
+  width: 85%;
 }
 
 .discover-imgs-ul {
@@ -156,4 +159,8 @@
   font-size: 20px;
   font-family: "Calibre", Helvetica, Arial, sans-serif;
   font-weight: 400;
+}
+.search-container {
+  width: 85%;
+  margin: auto;
 }
