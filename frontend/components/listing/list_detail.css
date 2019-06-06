@@ -27,16 +27,16 @@
   color: #333333;
   font-family: "Calibre", Helvetica, Arial, sans-serif;
 }
-
+/* 
 .listing-detail-image-container {
   height: 550px;
   width: 100%;
-}
-
+} */
+/* 
 .listing-detail-image-container img {
   height: 100%;
   width: 80%;
-}
+} */
 
 .listing-booking-form-container {
   position: -webkit-sticky;

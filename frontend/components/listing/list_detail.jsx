@@ -16,13 +16,13 @@ class ListingDetail extends React.Component {
     }
     let sampleImg = <img src="no_image.jpg" />;
     if (this.props.listing.imgUrls.length > 0) {
-      sampleImg = <img src={this.props.listing.imgUrls[0]} />;
-      // sampleImg = <ImageCollection images={this.props.listing.imgUrls} />;
+      // sampleImg = <img src={this.props.listing.imgUrls[0]} />;
+      sampleImg = <ImageCollection images={this.props.listing.imgUrls} />;
     }
     return (
       <div>
         <div className="listing-detail-head-dummy-div" />
-        <div className="listing-detail-image-container">{sampleImg}</div>
+        <div className="listing-image-container">{sampleImg}</div>
         <div className="listing-middle-container">
           <div className="listing-detail-container-div">
             <div className="listing-detail-title-div">

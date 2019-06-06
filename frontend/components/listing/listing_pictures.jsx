@@ -38,16 +38,25 @@ export default function ListingPictures({ images }) {
   let imgCollection = [];
   let currIdx = 0;
   for (let i = 0; i < images.length; i++) {
+    let v = "none";
+    if (i === 0) {
+      v = "block";
+    }
     let img = (
-      <img className="listing-image" src={`${images[i]}`} key={`${i}`} />
+      <img
+        className="listing-image"
+        src={`${images[i]}`}
+        key={`${i}`}
+        style={{ display: v }}
+      />
     );
     imgCollection.push(img);
   }
 
   return (
     <div className="listing-detail-image-container">
-      {imgCollection.map(img => img)}
-      <button
+      <div
+        className="left-btn"
         onClick={() => {
           console.log("left" + currIdx);
           currIdx = (currIdx - 1) % imgCollection.length;
@@ -55,8 +64,10 @@ export default function ListingPictures({ images }) {
         }}
       >
         &#10094;
-      </button>
-      <button
+      </div>
+
+      <div
+        className="right-btn"
         onClick={() => {
           console.log("right" + currIdx);
           currIdx = (currIdx + 1) % imgCollection.length;
@@ -64,7 +75,9 @@ export default function ListingPictures({ images }) {
         }}
       >
         &#10095;
-      </button>
+      </div>
+
+      {imgCollection.map(img => img)}
     </div>
   );
 }

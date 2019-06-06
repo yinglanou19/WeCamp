@@ -121,26 +121,53 @@
   width: 100%;
 } */
 
-.fileUpload {
+#fileUpload {
   position: relative;
   overflow: hidden;
-  margin: 10px;
-  border: 1px solid black;
-  background: pink;
-
+  margin-right: 10px;
+  border: 2px solid rgb(124, 127, 126);
+  background: rgb(124, 127, 126);
+  /* border-radius: 7px; */
+  color: white;
+  width: 20%;
+  height: 100%;
   text-align: center;
+  /* font-family: "Calibre", Helvetica, Arial, sans-serif;
+  font-size: 26px; */
 }
 
+#fileUpload:hover {
+  background: white;
+  color: rgb(124, 127, 126);
+}
+
+#fileUpload span {
+  text-align: center;
+  font-family: "Calibre", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+#uploadFile {
+  font-family: "Calibre", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  /* border: 1px solid darkgrey; */
+}
 .image-upload-container {
   display: flex;
-  border: 1px solid green;
+  /* border: 1px solid green; */
+  justify-content: center;
+  line-height: 30px;
 }
 
 #uploadBtn {
-  /* position: absolute; */
+  position: absolute;
   font-size: 20px;
-  cursor: pointer;
   border: 1px solid red;
+  cursor: pointer;
+  left: -100px;
+  top: 0;
   opacity: 0;
+  width: 200%;
+  height: 100%;
   /* filter: alpha(opacity=0); */
 }

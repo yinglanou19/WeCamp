@@ -145,8 +145,10 @@ class ListingCreateForm extends React.Component {
                 />
               </div>
               <div className="image-upload-container">
-                <div className="fileUpload">
-                  <span>Upload</span>
+                <div id="fileUpload">
+                  <span>
+                    <i className="fas fa-cloud-upload-alt" /> Upload
+                  </span>
                   <input
                     id="uploadBtn"
                     type="file"
@@ -156,7 +158,7 @@ class ListingCreateForm extends React.Component {
                 </div>
                 <input
                   id="uploadFile"
-                  placeholder="Choose File"
+                  placeholder="  Select images"
                   disabled="disabled"
                 />
               </div>

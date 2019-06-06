@@ -1,8 +1,47 @@
 .listing-image {
   height: 100%;
-  width: 80%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
 }
 .listing-detail-image-container {
   height: 550px;
-  width: 100%;
+  width: 90%;
+  max-width: 1200px;
+  position: relative;
+}
+
+.left-btn {
+  height: 100%;
+  width: 20%;
+  cursor: pointer;
+  z-index: 1;
+  float: left;
+  background: grey;
+  color: white;
+  opacity: 0.2;
+  text-align: center;
+  font-size: 90px;
+  line-height: 550px;
+}
+
+.right-btn {
+  height: 100%;
+  width: 20%;
+  cursor: pointer;
+  z-index: 1;
+  float: right;
+  background: grey;
+  color: white;
+  opacity: 0.2;
+  text-align: center;
+  font-size: 90px;
+  line-height: 550px;
+}
+
+.left-btn:hover,
+.right-btn:hover {
+  opacity: 0.6;
 }
