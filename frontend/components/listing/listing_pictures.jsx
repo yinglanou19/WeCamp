@@ -59,7 +59,7 @@ export default function ListingPictures({ images }) {
         className="left-btn"
         onClick={() => {
           console.log("left" + currIdx);
-          currIdx = (currIdx - 1) % imgCollection.length;
+          currIdx = (currIdx - 1 + imgCollection.length) % imgCollection.length;
           plusDivs(currIdx);
         }}
       >
