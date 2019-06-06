@@ -97,3 +97,50 @@
   margin-top: 50px;
   background: white;
 }
+/* 
+.image-upload-container {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid black;
+  background: pink;
+  border-radius: 10px;
+  width: 15%;
+  height: 30px;
+  margin-top: 5px;
+  margin: auto;
+  cursor: pointer;
+} */
+/* 
+#uploadBtn {
+  position: absolute;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  border: 1px solid red;
+  width: 100%;
+} */
+
+.fileUpload {
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  border: 1px solid black;
+  background: pink;
+
+  text-align: center;
+}
+
+.image-upload-container {
+  display: flex;
+  border: 1px solid green;
+}
+
+#uploadBtn {
+  /* position: absolute; */
+  font-size: 20px;
+  cursor: pointer;
+  border: 1px solid red;
+  opacity: 0;
+  /* filter: alpha(opacity=0); */
+}

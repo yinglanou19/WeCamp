@@ -47,7 +47,7 @@ class ListingCreateForm extends React.Component {
     // if (file) {
     //   reader.readAsDataURL(file);
     // }
-
+    document.getElementById("uploadFile").value = e.target.value;
     this.setState({ images: e.target.files });
   }
 
@@ -70,7 +70,13 @@ class ListingCreateForm extends React.Component {
       return this.props.history.push(`listings/${l.listing.id}`);
     });
   }
+
   render() {
+    // if (document.getElementById("uploadBtn")) {
+    //   document.getElementById("uploadBtn").onchange = function() {
+    //     document.getElementById("uploadFile").value = this.value;
+    //   };
+    // }
     return (
       <div className="listing-create-container">
         <div className="listing-create-header-dummy" />
@@ -139,10 +145,19 @@ class ListingCreateForm extends React.Component {
                 />
               </div>
               <div className="image-upload-container">
+                <div className="fileUpload">
+                  <span>Upload</span>
+                  <input
+                    id="uploadBtn"
+                    type="file"
+                    onChange={this.handleFile.bind(this)}
+                    multiple
+                  />
+                </div>
                 <input
-                  type="file"
-                  onChange={this.handleFile.bind(this)}
-                  multiple
+                  id="uploadFile"
+                  placeholder="Choose File"
+                  disabled="disabled"
                 />
               </div>
               <div className="listing-create-button-div">
