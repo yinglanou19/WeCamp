@@ -50,7 +50,7 @@ class BookingCreateForm extends React.Component {
         </div>
         <form onSubmit={this.handleSubmit}>
           <div className="create-book-data-container">
-            <div>
+            <div className="booking-data-item-container">
               <div className="booking-data-title-div">Check in</div>
               <input
                 type="date"
@@ -59,7 +59,7 @@ class BookingCreateForm extends React.Component {
                 onChange={this.update("check_in")}
               />
             </div>
-            <div>
+            <div className="booking-data-item-container">
               <div className="booking-data-title-div">Check out</div>
               <input
                 type="date"
@@ -68,14 +68,14 @@ class BookingCreateForm extends React.Component {
                 onChange={this.update("check_out")}
               />
             </div>
-            <div>
+            <div className="booking-data-item-container">
               <div className="booking-data-title-div">Guests</div>
               <input
                 type="number"
                 step="1"
                 min="1"
                 max={this.props.maxGuests}
-                praceholder="number of Guests"
+                placeholder={`Max: ${this.props.maxGuests}`}
                 onChange={this.update("num_guests")}
               />
             </div>

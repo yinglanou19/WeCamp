@@ -4,7 +4,9 @@
   background-color: #fef2d6;
   position: center;
 }
-
+.session-form-errors {
+  padding-left: 0;
+}
 .session-input-field {
   color: black;
   font-size: 15px;
