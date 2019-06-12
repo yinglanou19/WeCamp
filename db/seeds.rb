@@ -14,7 +14,9 @@ Booking.destroy_all
 
 
 u1 = User.create({username:"Milktea",password:"milktea",first_name:"milk",last_name:"tea", zip_code:"11220"})
-u2 = User.create({username:"boba",password:"bobabutt",first_name:"boba",last_name:"butt", zip_code:"11354"})
+u2 = User.create({username:"bobabutt",password:"bobabutt",first_name:"boba",last_name:"butt", zip_code:"11354"})
+
+# u2 = User.create({username:"boba",password:"bobabutt",first_name:"boba",last_name:"butt", zip_code:"11354"})
 u3 = User.create({username:"Dragonfruit",password:"dragonfruit",first_name:"dragon",last_name:"fruit", zip_code:"11790"})
 u4 = User.create({username:"Maria12", password:"password", first_name:"Maria", last_name:"Key",zip_code:"94501"})
 u5 = User.create({username:"PeterReal", password:"password", first_name:"Peter", last_name:"Real", zip_code:"94502"})

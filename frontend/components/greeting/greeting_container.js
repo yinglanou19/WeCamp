@@ -19,7 +19,8 @@ const mapDispatchToProps = dispatch => ({
   openModal: formType => dispatch(openModal(formType)),
   closeModal: () => dispatch(closeModal()),
   clearErrors: () => dispatch(clearSessionErrors()),
-  demologin: () => dispatch(login({ username: "boba", password: "bobabutt" }))
+  demologin: () =>
+    dispatch(login({ username: "bobabutt", password: "bobabutt" }))
 });
 
 export default withRouter(
