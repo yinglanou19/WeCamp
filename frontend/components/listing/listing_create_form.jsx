@@ -94,8 +94,7 @@ class ListingCreateForm extends React.Component {
                 onChange={this.update("title")}
                 className="listing-create-title"
               />
-              <input
-                type="textarea"
+              <textarea
                 value={this.state.description}
                 placeholder="Description"
                 onChange={this.update("description")}

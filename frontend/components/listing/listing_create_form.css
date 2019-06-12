@@ -36,6 +36,7 @@
 
 .listing-create-description {
   height: 100px;
+  resize: none;
 }
 
 .listing-create-nums {
