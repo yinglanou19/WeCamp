@@ -91,11 +91,8 @@ l5.images.attach(io: file12, filename: 'file12.jpg')
 l6.images.attach(io: file13, filename: 'file13.jpg')
 
 l7.images.attach(io: file14, filename: 'file14.jpg')
-l7.images.attach(io: file9, filename: 'file9.jpg')
 l8.images.attach(io: file15, filename: 'file15.jpg')
-l8.images.attach(io: file8, filename: 'file8.jpg')
 l9.images.attach(io: file16, filename: 'file16.jpg')
-l9.images.attach(io: file11, filename: 'file11.jpg')
 
 
 
