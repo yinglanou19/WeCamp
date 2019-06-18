@@ -56,9 +56,13 @@ end
 
 A listing can be booked by many users, we want to make sure that it is not booked by more than one user in any given day. In order to do so, I wrote a function in the Booking model that validates the incoming booking before creating or editing it. The function utilizes ActiveRecord::Relation by keep chaining constraints onto it until all conditions are checked.
 The idea is to find the booking(s) that
+
 (1)is not the incoming booking itself,
+
 (2)has the same foreign key(belongs to the same listing as the incoming booking), and
+
 (3)has a check in date that is later than the incoming booking's check out date, and a check out date that is earlier than the incoming booking's check in date.
+
 If there isn't any bookings that meet such conditions, the incoming booking will not overlaps with any bookings in the database. We can then create and save that booking.
 
 ## Install
