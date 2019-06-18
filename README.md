@@ -30,6 +30,37 @@ Upon entering a keyword to the search bar, the Rails backend controller will que
 
 When user creates a new listing, Wecamp allows users to upload multiple images at the same time. Wecamp utilizes Amazon S3 and Rails' Active Storage to safely and efficiently store and manage images.
 
+### Double Booking Prevention
+
+```ruby
+class Booking < ApplicationRecord
+
+    validate :is_not_overlapped
+
+    # ...
+
+    private
+    def is_not_overlapped
+        overlapped = Booking
+            .where.not(id: self.id)
+            .where(listing_id: listing_id)
+            .where.not('check_in > :check_out OR check_out < :check_in',
+                 check_in: check_in, check_out: check_out)
+        unless overlapped.empty?
+            errors[:base] << 'Booking conflicts with existing ones.'
+        end
+    end
+
+end
+```
+
+A listing can be booked by many users, we want to make sure that it is not booked by more than one user in any given day. In order to do so, I wrote a function in the Booking model that validates the incoming booking before creating or editing it. The function utilizes ActiveRecord::Relation by keep chaining constraints onto it until all conditions are checked.
+The idea is to find the booking(s) that
+(1)is not the incoming booking itself,
+(2)has the same foreign key(belongs to the same listing as the incoming booking), and
+(3)has a check in date that is later than the incoming booking's check out date, and a check out date that is earlier than the incoming booking's check in date.
+If there isn't any bookings that meet such conditions, the incoming booking will not overlaps with any bookings in the database. We can then create and save that booking.
+
 ## Install
 
 `$ git clone https://github.com/yinglanou19/WeCamp.git`
